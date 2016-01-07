@@ -6,7 +6,7 @@ order: 9
 ## Installation
 
 首先将源码下下来
-`git clone git@github.com:Littly/haloDoc.git haloDoc`
+`git clone https://github.com/o2team/haloDoc.git haloDoc`
 
 **安装依赖**
 ```bsh
@@ -18,7 +18,7 @@ git submodule update --init --recursive
 
 ## Usage
 **新建文章**
-`hexo new doc {{ title }}`
+`hexo new post {% raw %}{{ title }}{% endraw %}`
 
 **生成静态文件**
 `hexo g`
@@ -49,9 +49,14 @@ git submodule update --init --recursive
 **{% raw %}{% endalert %}{% endraw %}**
 
 ### codeDemo
+
 {% raw %}
 {% demo demo/cardSlider.html Demotitle %}
 {% endraw %}
+
+{% alert warn %}
+注意: demo文件请放在source/demo/路径下. 
+{% endalert %}
 
 ## Demo
 
