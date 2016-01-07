@@ -1,14 +1,10 @@
-title: GettingStarted
-order: 1
----
-
 ## Installation
 
 首先将源码下下来
-`git clone git@github.com:Littly/haloDoc.git haloDoc`
+`git clone https://github.com/o2team/haloDoc.git haloDoc`
 
 **安装依赖**
-```bash
+```bsh
 cd haloDoc
 npm install
 git submodule update --init --recursive
@@ -17,7 +13,7 @@ git submodule update --init --recursive
 
 ## Usage
 **新建文章**
-`hexo new doc {{ title }}`
+`hexo new post {% raw %}{{ title }}{% endraw %}`
 
 **生成静态文件**
 `hexo g`
@@ -48,9 +44,14 @@ git submodule update --init --recursive
 **{% raw %}{% endalert %}{% endraw %}**
 
 ### codeDemo
+
 {% raw %}
-{% demo /demo/cardSlider.html Demotitle %}
+{% demo demo/cardSlider.html Demotitle %}
 {% endraw %}
+
+{% alert warn %}
+注意: demo文件请放在source/demo/路径下.
+{% endalert %}
 
 ## Demo
 
@@ -66,4 +67,4 @@ git submodule update --init --recursive
 这是信息框
 {% endalert %}
 
-{% demo /demo/cardSlider.html Demotitle %}
+{% demo api/index.html Demotitle %}
