@@ -45,6 +45,4 @@ $.stylesheet('body{background-color: #ff0','delete');
 
 ## DEMO
 
-{% demo /demo/stylesheet.html 点击查看stylesheet %}
-
-
+{% demo demo/stylesheet.html 点击查看stylesheet %}

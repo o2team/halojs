@@ -1,4 +1,6 @@
-title: overview
+title: 概述
+group: 概述
+order: 9
 ---
 
 ## Installation
@@ -48,7 +50,7 @@ git submodule update --init --recursive
 
 ### codeDemo
 {% raw %}
-{% demo /demo/cardSlider.html Demotitle %}
+{% demo demo/cardSlider.html Demotitle %}
 {% endraw %}
 
 ## Demo
@@ -65,4 +67,4 @@ git submodule update --init --recursive
 这是信息框
 {% endalert %}
 
-{% demo /demo/cardSlider.html Demotitle %}
+{% demo api/index.html Demotitle %}

@@ -37,4 +37,4 @@ $.launcthApp(
 
 ## DEMO
 
-{% demo /demo/launchApp.html 点击查看launchApp %}
+{% demo demo/launchApp.html 点击查看launchApp %}

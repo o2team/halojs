@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>HO2 - compare - demo</title>
+    <style>
+    html,body{width:100%; height:100%; overflow:hidden; margin: 0; padding: 0;}
+    textarea{display: block; width: 300px; height: 300px; border: 1px solid #300; margin: 20px auto;}
+    </style>
+
+</head>
+<body ontouchstart>
+<textarea id="js">window.test1={
+    a:1,
+    b:"str",
+    c:[1,2,3,{c1:"c1",c2:2}],
+    d:{
+        d1:1,
+        d2:"d2",
+        d3:["a","b","c"]
+    }
+};
+window.test2={
+    a:11,
+    b:"str",
+    c:[1,2,3,{c1:"c1",c2:2}],
+    d:{
+        d1:1,
+        d2:"d2",
+        d3:["a","b","c"]
+    }
+};
+</textarea>
+<input type="button" style="display: block; width: 200px; height: 30px; line-height: 30px; display: block; margin: 0 auto; border: 0 none; padding: 0; background-color: #f00; color: #fff; border-radius: 3px;" value="对比" id="doCompare">
+
+
+<script type="text/javascript" src="http://wq.360buyimg.com/js/ho2/zepto.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/ho2.js?v=2"></script>
+<script src="http://wq.360buyimg.com/js/ho2/dev/compare.js?v=2"></script>
+<script type="text/javascript">
+$("#doCompare").click(function(){
+    console.log($("#js").val());
+    eval($("#js").val());
+    alert($.compare(window.test1,window.test2)?"相等":"不相等");
+});
+</script>
+</body>
+</html>

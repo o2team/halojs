@@ -39,5 +39,4 @@ $.objectUpdate(obj1,obj2[,incremental]);
 
 ## DEMO
 
-{% demo /demo/objectUpdate.html 点击查看objectUpdate %}
-
+{% demo demo/objectUpdate.html 点击查看objectUpdate %}

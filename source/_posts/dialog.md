@@ -198,8 +198,6 @@ $.dialog(
 
 
 
-## DEMO 
+## DEMO
 
-{% demo /demo/dialog.html 点击查看dialog %}
-
-
+{% demo demo/dialog.html 点击查看dialog %}

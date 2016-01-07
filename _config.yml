@@ -8,7 +8,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://aotu.io/haloDoc
+url: http://aotu.io/haloDoc/
 root: /haloDoc/
 permalink: api/:title.html
 
@@ -48,6 +48,7 @@ pagination_dir: page
 
 #theme: landscape
 theme: hexo-theme-doc
+
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

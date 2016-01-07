@@ -71,6 +71,4 @@ $.jsonp(
 
 ## DEMO
 
-{% demo /demo/jsonp.html 点击查看jsonp %}
-
-
+{% demo demo/jsonp.html 点击查看jsonp %}

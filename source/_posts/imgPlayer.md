@@ -50,8 +50,6 @@ $("#container").imgPlayer(
 | totalPage | int | 播放器的图片数。不可修改 |
 
 
-## DEMO 
+## DEMO
 
-{% demo /demo/imgPlayer.html 点击查看imgPlayer %}
-
-
+{% demo demo/imgPlayer.html 点击查看imgPlayer %}

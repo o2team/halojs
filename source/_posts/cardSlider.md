@@ -1,5 +1,6 @@
 title: 'cardSlider'
 order: 1
+group: 翻页组件
 ---
 
 ## 功能
@@ -80,5 +81,3 @@ $("#wrap").cardSlider(
 ## DEMO
 
 {% demo demo/cardSlider.html 点击查看cardSlider %}
-
-
