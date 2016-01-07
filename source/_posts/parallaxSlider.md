@@ -1,22 +1,21 @@
-title: 'cardSlider'
-order: 1
+title: 'parallaxSlider'
+order: 11
 ---
 
 ## 功能
 
-卡片式翻页。
+带视差的翻页
 
-> author: leeenx
-> version: 1.0.0
-> data: 2015-12-07
+> author leeenx
+> version 1.0.0
+> date: 2015-12-07
 
 ## Official Usage
 
 ```javascript
-$("#wrap").cardSlider(
+$("#wrap").parallaxSlider(
 	{
         direction:'Y',
-        scale:true,
         offset:50,
         duration:300,
         infinite:true,
@@ -29,28 +28,11 @@ $("#wrap").cardSlider(
 );
 ```
 
-## Lazy Usage
-
-```javascript
-$("#wrap").cardSlider(
-	{
-        direction:'Y',
-        first: 0,//首屏索引
-        scale:true,
-        offset:50,
-        duration:300,
-        infinite:true,
-        onchange:function(o,i){
-            //通过this[0]可以取对应的分页哦
-            //o滑出页索引，i滑入页索引
-            console.log(o,i);
-        }
-    }
-);
-```
 {% alert warn %}
-需要注意，#wrap容器下的所有子节点都会被识别为它的子页。具体，看DEMO
+需要注意，#wrap容器下的所有子节点都会被识别为它的子页。带`halo-slider-speed`属性的是视差页，它的值是视差率。
+具体请参见DEMO
 {% endalert %}
+
 
 
 ## 参数列表
@@ -73,12 +55,10 @@ $("#wrap").cardSlider(
 | :----: | :---- |
 | lock | 锁定页面。锁定后不能翻页 |
 | unlock | 解锁页面，与lock相对应 |
-| move | 将页面定位到指定的索引值。cardSlider.move(index); |
+| move | 将页面定位到指定的索引值。parallaxSlider.move(index); |
 
 
 
 ## DEMO
 
-{% demo demo/cardSlider.html 点击查看cardSlider %}
-
-
+{% demo demo/parallaxSlider.html 点击查看parallaxSlider %}

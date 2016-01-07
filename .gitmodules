@@ -1,3 +1,6 @@
 [submodule "themes/doc"]
 	path = themes/hexo-theme-doc
 	url = https://github.com/Littly/hexo-themes-doc.git
+[submodule "themes/hexo-theme-doc"]
+	path = themes/hexo-theme-doc
+	url = https://github.com/Littly/hexo-themes-doc.git
