@@ -1,6 +1,7 @@
 title: 概述
 group: 概述
 order: 9
+ignore: true
 ---
 
 ## Installation
@@ -55,7 +56,7 @@ git submodule update --init --recursive
 {% endraw %}
 
 {% alert warn %}
-注意: demo文件请放在source/demo/路径下. 
+注意: demo文件请放在source/demo/路径下.
 {% endalert %}
 
 ## Demo
