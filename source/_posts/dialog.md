@@ -1,5 +1,6 @@
 title: 'dialog'
 order: 19
+group: UI模块
 ---
 
 ## 作用
@@ -198,8 +199,6 @@ $.dialog(
 
 
 
-## DEMO 
+## DEMO
 
-{% demo /demo/dialog.html 点击查看dialog %}
-
-
+{% demo demo/dialog.html 点击查看dialog %}

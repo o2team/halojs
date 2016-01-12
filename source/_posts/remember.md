@@ -1,5 +1,6 @@
 title: 'remember'
 order: 6
+group: 基础模块
 ---
 
 ## 功能

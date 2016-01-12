@@ -1,5 +1,6 @@
 title: 'launchApp'
 order: 16
+group: 其它模块
 ---
 
 ## 功能
@@ -37,4 +38,4 @@ $.launcthApp(
 
 ## DEMO
 
-{% demo /demo/launchApp.html 点击查看launchApp %}
+{% demo demo/launchApp.html 点击查看launchApp %}

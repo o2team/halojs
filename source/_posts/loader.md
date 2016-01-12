@@ -1,5 +1,6 @@
 title: 'loader'
 order: 7
+group: 基础模块
 ---
 
 ## 功能

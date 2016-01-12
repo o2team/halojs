@@ -1,5 +1,6 @@
 title: 'objectUpdate'
 order: 17
+group: 基础模块
 ---
 
 ## 功能
@@ -39,5 +40,4 @@ $.objectUpdate(obj1,obj2[,incremental]);
 
 ## DEMO
 
-{% demo /demo/objectUpdate.html 点击查看objectUpdate %}
-
+{% demo demo/objectUpdate.html 点击查看objectUpdate %}

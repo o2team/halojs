@@ -1,5 +1,6 @@
 title: 'textMarquee'
 order: 15
+group: UI模块
 ---
 
 ## 功能

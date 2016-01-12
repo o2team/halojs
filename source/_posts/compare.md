@@ -1,5 +1,6 @@
 title: compare
 order: 2
+group: 基础模块
 ---
 
 ## 功能

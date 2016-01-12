@@ -1,5 +1,6 @@
 title: 'jsonp'
 order: 19
+group: 基础模块
 ---
 
 ## 功能
@@ -71,6 +72,4 @@ $.jsonp(
 
 ## DEMO
 
-{% demo /demo/jsonp.html 点击查看jsonp %}
-
-
+{% demo demo/jsonp.html 点击查看jsonp %}

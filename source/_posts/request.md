@@ -1,5 +1,6 @@
 title: 'request'
 order: 8
+group: 基础模块
 ---
 
 ## 功能
@@ -23,5 +24,5 @@ $.request("name");
 
 ## DEMO
 
-{% demo demo/request.html 点击查看request %}
+{% demo demo/request.html?k=halojs 点击查看request %}
 

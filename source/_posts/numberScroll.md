@@ -1,5 +1,6 @@
 title: 'numberScroll'
 order: 22
+group: UI模块
 ---
 
 ## 功能
@@ -27,6 +28,12 @@ $("#container").numberScroll(
     }
 );
 ```
+
+
+## DEMO
+
+{% demo demo/numberScroll.html 点击查看numberScroll %}
+
 
 
 

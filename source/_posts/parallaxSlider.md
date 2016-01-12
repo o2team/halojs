@@ -1,5 +1,6 @@
 title: 'parallaxSlider'
 order: 11
+group: 翻页模块
 ---
 
 ## 功能

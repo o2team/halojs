@@ -1,5 +1,6 @@
 title: 'randomSort'
 order: 5
+group: 基础模块
 ---
 
 ## 功能

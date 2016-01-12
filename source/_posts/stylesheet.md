@@ -1,5 +1,6 @@
 title: 'stylesheet'
 order: 18
+group: 基础模块
 ---
 
 ## 功能
@@ -45,6 +46,4 @@ $.stylesheet('body{background-color: #ff0','delete');
 
 ## DEMO
 
-{% demo /demo/stylesheet.html 点击查看stylesheet %}
-
-
+{% demo demo/stylesheet.html 点击查看stylesheet %}

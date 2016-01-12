@@ -1,5 +1,6 @@
 title: 'ezLoader'
 order: 21
+group: 基础模块
 ---
 
 ## 功能
@@ -34,9 +35,6 @@ $.ezLoader(
 | zoom | int | optional | 当前页面的缩放率。默认为 1 |
 
 
-## DEMO 
+## DEMO
 
-{% demo /demo/ezLoader.html 点击查看ezLoader %}
-
-
-
+{% demo demo/ezLoader.html 点击查看ezLoader %}

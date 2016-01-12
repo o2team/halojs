@@ -1,5 +1,6 @@
 title: 'PCPrompt'
 order: 4
+group: UI模块
 ---
 
 ## 功能

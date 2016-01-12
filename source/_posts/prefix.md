@@ -1,5 +1,6 @@
 title: 'prefix'
 order: 0
+group: 基础模块
 ---
 
 ## 功能
@@ -24,7 +25,4 @@ console.log($.prefix);
 
 ## DEMO
 
-{% demo /demo/prefix.html 点击查看prefix %}
-
-
-
+{% demo demo/prefix.html 点击查看prefix %}
