@@ -1,0 +1,54 @@
+<!--S 文章-->
+<div id='j_post' class="post">
+	<h1 id="<%- post.title %>" class="post_title">
+		<%- post.title %>
+	</h1>
+	<div class="post_content">
+		<%- post.content %>
+	</div>
+
+	<div class="post_comment">
+		<% switch (theme.Comment) { case 'Changyan': %>
+				<div id="SOHUCS"></div>
+				<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+				<script type="text/javascript">
+					window.changyan.api.config({
+						appid: '<%- site.data.config.CY_appid %>',
+						conf: '<%- site.data.config.CY_conf %>'
+					});
+				</script>
+			<% break;case 'Duoshuo': %>
+				<div class="ds-thread"
+					 data-thread-key="<%- post._id %>"
+					 data-title="<%- post.title %>" data-url="<%- url %>"></div>
+				<script type="text/javascript">
+				var duoshuoQuery = {short_name:"<%- site.data.config.DS_shortname %>"};
+					(function() {
+						var ds = document.createElement('script');
+						ds.type = 'text/javascript';ds.async = true;
+						ds.src = (document.location.protocol == 'https:' ?
+									'https:' :
+									'http:') + '//static.duoshuo.com/embed.js';
+						ds.charset = 'UTF-8';
+						(document.getElementsByTagName('head')[0]
+						 || document.getElementsByTagName('body')[0]).appendChild(ds);
+					})();
+				</script>
+			<% break;case 'Disqus': %>
+				<div id="disqus_thread"></div>
+				<script>
+					var disqus_config = function () {
+						this.page.url = '<%- url %>';
+						this.page.identifier = '<%- post._id %>';
+					};
+					(function() {
+						var d = document, s = d.createElement('script');
+						s.src = '//halodoc.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+		<% } %>
+	</div>
+</div>
+<!--E 文章-->

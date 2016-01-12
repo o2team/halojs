@@ -1,0 +1,64 @@
+<%- partial("partial/header.ejs") %>
+
+	<div class="bd idx">
+		<div class="idx_banner">
+			<h1>HaloJS, </h1>
+			<p class="idx_banner_input">
+				<span class="idx_banner_input_prompt">$</span>
+				<span class="idx_banner_input_txt">cd GettingStarted! </span>
+				<a class="idx_banner_input_enter" href='<%- config.root + "api/"%>'>
+					<img src='img/idx_banner_input_enter.png'>
+				</a>
+			</p>
+		</div>
+		<div class="idx_intro">
+			<h2 class="idx_intro_hd">核心组件</h2>
+			<ul class="idx_intro_list">
+				<li>
+					<div class="idx_intro_licon">
+						<img src='img/idx_intro_licon_base.png'>
+					</div>
+					<h3>基础组件</h3>
+					<p>
+						HTML5移动端开发的常用组件<br>
+						包括cookie操作 浏览器特征前缀获取 图片惰性加载等组件
+					</p>
+				</li>
+				<li>
+					<div class="idx_intro_licon">
+						<img src='img/idx_intro_licon_pager.png'>
+					</div>
+					<h3>翻页组件</h3>
+					<p>
+						移动端全屏滑动页面中常用的翻页效果<br>
+						包括卡片式翻页与视差翻页
+					</p>
+				</li>
+				<li>
+					<div class="idx_intro_licon">
+						<img src='img/idx_intro_licon_ui.png'>
+					</div>
+					<h3>UI组件</h3>
+					<p>
+						移动端页面开发中常用的UI组件<br>
+						包括对话框组件, 图片浏览组件等
+					</p>
+				</li>
+			</ul>
+		</div>
+		<div class="idx_info">
+			<h2 class="idx_info_hd">
+				关注我们
+			</h2>
+			<p class="idx_info_qrcode">
+				<img src="http://aotu.io/assets/img/qrcode.png" alt="关注我们">
+			</p>
+			<p class="idx_info_desc">无折腾不为乐 - 我们爱生活，爱设计，爱技术，爱创作，喜欢闹腾。</p>
+			<p class="idx_info_wechat">
+				<img src="http://aotu.io/assets/img/logo-circle-120.png" alt="AOTULabs"> 微信号：AOTULabs
+			</p>
+		</div>
+	</div>
+	<%- page.content %>
+
+<%- partial("partial/footer.ejs") %>
