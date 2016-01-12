@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>HALOJS - subscribeActive - demo</title>
+    <style>
+    html,body{width:100%; height:100%; margin: 0; padding: 0; text-align: center;}
+    textarea{display: block; -webkit-appearance: none; height: 300px; width: 100%;border: 1px solid #300; margin: 0; resize: none;}
+    .btn{display: block; width: 200px; height: 30px; line-height: 30px; text-align: center; margin: 10px auto; text-decoration: none; border-radius: 3px; background-color: #3985ff; color: #fff;}
+    .tab,.tab:active,.tab:visited{display: block; width: 50%; text-decoration: none; background-color: #01b2eb; height: 50px; line-height: 50px; color: #fff;}
+    .tab2,.tab2:active,.tab2:visited{margin: -50px 0 0 50%;}
+    .tab.on,.tab.on:active,.tab.on:visited{background-color: #fff; color: #01b2eb;}
+    </style>
+
+</head>
+<body ontouchstart>
+<a class="tab on" href="javascript:;" id="tab1">单活动预约</a>
+<a class="tab tab2" href="javascript:;" id="tab2">多活动预约</a>
+<div style="margin: 20px">
+    <textarea id="js"></textarea>
+</div>
+<textarea id="code1" style="display: none">$.subscribeActive(
+    {
+        activeId: 10003,
+        cb:function(json){
+            //"retCode":"", //返回码，正常返回为空，13为未登录，10001参数错误，其他为系统错误
+            //"replyCode":"0", //0预约成功 10006重复预约，10007不是预约活动，10008预约已结束，10009预约还未开始
+            var ret=json.retCode;
+            console.log(ret);
+            if(13==ret){
+                $.wqlogin();
+            }else if("0"==ret||"10006"==ret){
+                alert("预约成功");
+                console.log(json.retMsg);
+            }else{
+                alert("预约失败");
+            }
+        }
+    }
+);</textarea>
+<textarea id="code2" style="display: none;">$.subscribeActive(
+    {
+        activeId: "10003,10004,10005",//10005不是预约活动
+        cb:function(json){
+            //"retCode":"", //返回码，正常返回为空，13为未登录，10001参数错误，其他为系统错误
+            //"replyCode":"0", //0预约成功 10006重复预约，10007不是预约活动，10008预约已结束，10009预约还未开始
+            var ret=json.retCode;
+            console.log(ret);
+            if(13==ret){
+                $.wqlogin();
+            }else if("0"==ret){
+                alert("预约成功");//重复预约也算预约成功
+            }else if("-1"==ret){
+                alert("情况预约情况，请根据返回的报文");
+                console.log(json);
+            }else{
+                alert("预约失败");
+            }
+        }
+    }
+);</textarea>
+<a href="javascript:;" id="update" class="btn">运行</a>
+
+<script type="text/javascript" src="http://wq.360buyimg.com/js/ho2/zepto.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/ho2.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/dev/cookie.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/dev/request.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/bussiness/wqlogin.js"></script>
+
+<script src="http://wq.360buyimg.com/js/ho2/dev/jsonp.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/bussiness/g_tk.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/bussiness/subscribeActive.js?v=2"></script>
+<script type="text/javascript">
+$("#js").val($("#code1").val());
+$("#update").click(function(){
+    eval($("#js").val());
+});
+$("#tab1").click(function(){
+    $(this).addClass("on");
+    $("#tab2").removeClass("on");
+    $("#js").val($("#code1").val());
+});
+$("#tab2").click(function(){
+    $(this).addClass("on");
+    $("#tab1").removeClass("on");
+    $("#js").val($("#code2").val());
+});
+</script>
+</body>
+</html>

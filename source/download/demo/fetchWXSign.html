@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>HALOJS - fetchWXSign - demo</title>
+    <style>
+    html,body{width:100%; height:100%; overflow:hidden; margin: 0; padding: 0; text-align: center;}
+    textarea{display: block; width: 300px; height: 300px; border: 1px solid #300; margin: 20px auto;}
+    .btn{display: block; width: 200px; height: 30px; line-height: 30px; text-align: center; margin: 10px auto; text-decoration: none; border-radius: 3px; background-color: #3985ff; color: #fff;}
+    </style>
+
+</head>
+<body ontouchstart>
+<textarea id="js">$.fetchWXSign(
+    function(json){
+        alert(JSON.stringify(json));
+        console.log(json);
+        //返回的对象是如下信息：
+        /*
+        {
+            errCode:"0",
+            errMsg:"",
+            appId:"wxae3e8056daea8727",//wqs.jd.com的appid。这个appid是固定的，可以用于其它需要appid的地方
+            timestamp:"1445159790",//签名的时间戳 - 有效期为：7200s
+            nonceStr:"1465087326",//生成签名的随机串
+            signature:"badd9b625540a1432608d128c177dd253306e67c",//签名
+            jsapi_ticket:""
+        }
+        */
+    }
+);</textarea>
+<a href="javascript:;" id="update" class="btn">运行</a>
+
+<script type="text/javascript" src="http://wq.360buyimg.com/js/ho2/zepto.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/ho2.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/dev/cookie.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/dev/request.js"></script>
+
+<script src="http://wq.360buyimg.com/js/ho2/dev/jsonp.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/bussiness/wqlogin.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/bussiness/g_tk.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/bussiness/fetchWXSign.js"></script>
+<script type="text/javascript">
+$("#update").click(function(){
+    eval($("#js").val());
+});
+</script>
+</body>
+</html>
