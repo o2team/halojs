@@ -58,4 +58,4 @@ theme: hexo-theme-doc
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/o2team/haloDoc.git
+  repo: https://github.com/o2team/halojs.git

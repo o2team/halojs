@@ -317,7 +317,6 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 /*bd*/
 
 .bd {
-	/*min-width: 800px;*/
 	position: relative;
 	max-width: 1190px;
 	margin: 0 auto;
@@ -786,6 +785,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	padding: 10px 20px;
 	list-style: none;
 	overflow: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 .panel_list_item a{
@@ -1045,6 +1045,13 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	50%{border-right-color: #666;}
 	100%{border-right-color: #666;}
 }
+@keyframes blink {
+	0%{border-right-color: #fff;}
+	49.9%{border-right-color: #fff;}
+	50%{border-right-color: #666;}
+	100%{border-right-color: #666;}
+}
+
 @media (max-width: 840px) {
 	.dlist {
 		font-size: 12px;
@@ -1109,7 +1116,10 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 		padding: 0;
 	}
 	.bd {
-		padding-top: 100px;
+		padding-top: 120px;
+	}
+	.post {
+		margin: 0 20px 20px;
 	}
 	.idx{
 		padding-top: 0;
