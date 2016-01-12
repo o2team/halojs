@@ -3,10 +3,10 @@ var Util = require('./util'),
 	$ = require('./jquery'),
 	CodePrettify = require('./code_prettify');
 
-var Category,
-	Search,
+var Search,
 	Template,
 	Demo,
+	Panel,
 	init;
 
 Template = function (temp) {
@@ -90,7 +90,7 @@ Search = (function () {
 		} catch (e) {
 			_render([]);
 		}
-		
+
 	};
 
 	_render = function (map, reg) {
@@ -179,7 +179,7 @@ Demo = (function () {
 			if ($(evt.target).hasClass('post_content_dbtn')) {
 				if (!loaded) {
 					loaded = true;
-					Util.appendScript('/haloDoc/js/qrcode.js', function () {
+					Util.appendScript(hexo.config.root + 'js/qrcode.js', function () {
 						showCode($('div', evt.target)[0], $(evt.target).data('url'));
 					});
 					if ('QRCode' in window) {
@@ -202,10 +202,40 @@ Demo = (function () {
 	}
 })();
 
+Panel = (function () {
+	var init,
+		_bind,
+		_$menu,
+		_$body,
+		_$panel;
+
+	_$menu = $('#j_menu');
+	_$body = $(document.body);
+	_$panem = $('#j_panel');
+
+	_bind = function () {
+		_$menu.on('click', function () {
+			if (_$body.hasClass('open_panel')) {
+				_$body.removeClass('open_panel');
+			}
+			else {
+				_$body.addClass('open_panel');
+			}
+		});
+	};
+
+	init = function () {
+		_bind();
+	};
+	return {
+		init: init
+	}
+})();
 init = function () {
 	CodePrettify.init();
 	Demo.init();
 	Search.init();
+	Panel.init();
 };
 
 module.exports = {

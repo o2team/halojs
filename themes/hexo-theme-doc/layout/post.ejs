@@ -9,6 +9,20 @@
 		post: page
 	}) %>
 </main>
+<div id='j_panel' class='panel'>
+	<div class='panel_hd'>
+		<h2>
+			<a href='<%- config.root %>'>HaloJS</a>
+			<span>DOC</span>
+		<h2>
+	</div>
+	<ul class='panel_list'>
+		<%- sidebar('panel') %>
+	</ul>
+	<a id='j_menu' href='javascript:;' class="menu">
+		<span></span>
+	</a>
+</div>
 <%- partial("partial/footer.ejs") %>
 <script id='j_template' type="text/template">
 	<li class='api_list_item'>

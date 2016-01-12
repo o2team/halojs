@@ -1,4 +1,4 @@
-hexo.extend.helper.register('sidebar', function () {
+hexo.extend.helper.register('sidebar', function (className) {
     var that,
         group,
         groups,
@@ -34,19 +34,16 @@ hexo.extend.helper.register('sidebar', function () {
             items.forEach(function (val) {
                 if (pagetitle === val.title) {
                     current = true;
-                    children.push('<li class="api_list_item current">');
+                    children.push('<li class="' + className + '_list_item current">');
                 }
                 else {
-                    children.push('<li class="api_list_item">');
+                    children.push('<li class="' + className + '_list_item">');
                 }
                 children.push('<a href="' + that.url_for(val.path) + '">' + val.title + '</a>');
                 children.push('</li>');
             });
-            // str.push(items[0] ? '<li class="api_list_title' + (current ? ' current' : '') + '"><a href="' + that.url_for(items[0].path) + '">' + (isothers ? '其他组件' : group) + '</a></li>' : '');
-            str.push(items[0] ? '<li class="api_list_title' + (current ? ' current' : '') + '">' + (isothers ? '其他组件' : group) + '</li>' : '');
-            // str.push((items[1]) ? '<div>' : '<div class="hide">');
+            str.push(items[0] ? '<li class="' + className + '_list_title">' + (isothers ? '其他组件' : group) + '</li>' : '');
             str.push(children.join(''));
-            // str.push('</div>');
         };
     };
     [].forEach.call(groups, addGroup(false));

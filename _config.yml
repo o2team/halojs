@@ -8,8 +8,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://aotu.io/haloDoc/
-root: /haloDoc/
+url: http://aotu.io/halojs/
+root: /halojs/
 permalink: api/:title.html
 
 
@@ -28,6 +28,10 @@ highlight:
   line_number: true
   auto_detect: true
   tab_replace: true
+
+skip_render:
+  - demo/**
+  - src/**
 
 # Category & Tag
 default_category: uncategorized

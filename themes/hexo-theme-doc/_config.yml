@@ -5,7 +5,3 @@
 #需要在 source/_data/config.yml 中配置 DS_shortname
 #Disqus Disqus评论
 Comment: Disqus
-
-#可生成API目录的h级别
-TOClevel: 
-- 2

@@ -1,6 +1,3 @@
-<% if (is('demo')||is('src')) { %>
-	<%- page.content %>
-<% } else { %>
 <html>
 
 <head>
@@ -20,27 +17,6 @@
 		<%- title %>
 	</title>
 	<script>
-//		! function () {
-//			window.addEventListener('resize', (function () {
-//				var dd = document.documentElement,
-//					w,
-//					resize;
-//				resize = function () {
-//					w = dd.getBoundingClientRect().width;
-//					if (w < 320) {
-//						dd.style.fontSize = '20px';
-//						return;
-//					}
-//					if (w < 640) {
-//						dd.style.fontSize = w / 16 + 'px';
-//						return;
-//					}
-//					dd.style.fontSize = '40px';
-//				};
-//				resize();
-//				return resize;
-//			})());
-//		}();
 		Array.prototype.forEach = [].forEach || function (func) {
 			var len = this.length,
 				i = 0;
@@ -90,5 +66,3 @@
 </body>
 
 </html>
-
-<% } %>
