@@ -34,6 +34,9 @@ $.ezLoader(
 | zoom | int | optional | 当前页面的缩放率。默认为 1 |
 
 
-## DEMO
+## DEMO 
 
-{% demo demo/ezLoader.html 点击查看ezLoader %}
+{% demo /demo/ezLoader.html 点击查看ezLoader %}
+
+
+
