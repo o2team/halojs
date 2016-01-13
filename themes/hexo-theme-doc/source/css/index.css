@@ -1212,10 +1212,11 @@ ul, ol {
 		padding: 0;
 	}
 	.bd {
-		padding-top: 120px;
+		padding-top: 100px;
 	}
 	.post {
-		margin: 0 20px 20px;
+		margin: 0 0 20px;
+		padding: 20px;
 	}
 	.idx {
 		padding-top: 0;
