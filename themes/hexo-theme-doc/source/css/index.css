@@ -47,13 +47,16 @@ body {
 	width: 100%;
 	min-width: 320px;
 	height: 100%;
+}
+
+body {
 	font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Helvetica, Arial', sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
 	word-break: break-all;
 	text-align: justify;
 	color: #666;
-	background: rgb(238, 238, 238);
+	background: #eee;
 	-webkit-text-size-adjust: 100% !important;
 	text-size-adjust: 100% !important;
 }
@@ -395,7 +398,7 @@ ul, ol {
 	padding-top: 170px;
 	margin-bottom: 50px;
 	font-size: 50px;
-	font-weight: 100;
+	font-weight: 900;
 	text-align: center;
 	color: rgba(255, 255, 255, .9);
 }
@@ -689,6 +692,7 @@ ul, ol {
 
 .post_content .prettyprint code {
 	color: inherit;
+	font-size: 13px;
 	background: inherit;
 }
 
@@ -953,7 +957,6 @@ ul, ol {
 .dtxt {
 	width: 840px;
 	text-indent: 10px;
-	font-weight: 900;
 	font-size: 18px;
 	margin: 30px auto;
 }
