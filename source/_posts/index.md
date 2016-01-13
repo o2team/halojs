@@ -4,14 +4,28 @@ order: 9
 ignore: true
 ---
 
-HaloJS 是一款基于ZeptoJS并采用 CMD 规范，面向移动端提供各种实用功具的组件库。
+HaloJS 是一款基于ZeptoJS并采用 CMD 规范面向移动端提供各种实用功具的组件库。
 
 
 ## 如何使用
 
-1.&nbsp;直接在 [下载](http://aotu.io/halojs/download/) 界面下载需要的模块; 
-2.&nbsp;与 `seajs` 一起使用; 
-3.&nbsp;与HaloJS的加载器 `http://wq.360buyimg.com/js/ho2/ho2.js` 一起使用。
+1.&nbsp;&nbsp;如果习惯使用 `CMD` 模式开发的同学可以引用我们的模块直接进入开发，如下：
+
+```javascript
+//SeaJS
+require("request");
+$.request("k");//获取当前url参数名为k的值
+```
+
+2.&nbsp;&nbsp; 非 `CMD` 习惯的朋友直接下载打包好的模块，直接使用即可：
+
+```javascript
+$.request("k");
+```
+
+
+
+
 
 ## HaloJS 的优势
 
