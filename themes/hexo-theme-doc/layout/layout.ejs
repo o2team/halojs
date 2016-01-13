@@ -1,0 +1,68 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0'>
+	<title>
+		<%
+			var title;
+			if (is('api')) {
+				title = '文档 | ' + page.title;
+			} else if (is('index.html')) {
+				title = '首页 | HALOJS';
+			} else if (is('download')) {
+				title = '下载 | HALOJS';
+			}
+		%>
+		<%- title %>
+	</title>
+	<script>
+		Array.prototype.forEach = [].forEach || function (func) {
+			var len = this.length,
+				i = 0;
+			while (i < len) {
+				func.call(this, this[i], i, this);
+				i++;
+			}
+		};
+		Array.prototype.filter = [].filter || function (func) {
+			var len = this.length,
+				i = 0,
+				result = [];
+			while (i < len) {
+				if (func.call(this, this[i], i, this)) {
+					result.push(this[i]);
+				}
+				i++;
+			}
+			return result;
+		};
+		['aside', 'header', 'footer', 'nav', 'section', 'main'].forEach(function (val) {
+			document.createElement(val);
+		});
+		String.prototype.trim = String.prototype.trim || function () {
+			return this.replace(/^ *([\s\S]+?) *$/g, function (m, g1) {
+				return g1;
+			});
+		};
+	</script>
+	<%- css("css/index") %>
+	<%- css("css/prettify") %>
+</head>
+
+<body>
+	<%- body %>
+	<script type="text/javascript">
+		window.hexo = {};
+		hexo.config = JSON.parse(
+			'<%- JSON.stringify(config) %>'
+		);
+		hexo.theme = JSON.parse(
+			'<%- JSON.stringify(theme) %>'
+		);
+		hexo.path = '<%- path %>';
+	</script>
+	<%- js('js/bundle.js') %>
+</body>
+
+</html>

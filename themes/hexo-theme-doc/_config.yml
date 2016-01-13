@@ -1,0 +1,7 @@
+#Comment 评论 可选有Changyan Duoshuo Disqus
+#Changyan 畅言评论
+#需要在 source/_data/config.yml 中配置 CY_appid & CY_conf
+#Duoshuo 多说评论
+#需要在 source/_data/config.yml 中配置 DS_shortname
+#Disqus Disqus评论
+Comment: Disqus

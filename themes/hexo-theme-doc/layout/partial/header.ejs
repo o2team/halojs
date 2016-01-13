@@ -1,0 +1,31 @@
+<!--S 头部-->
+<header id='j_header' class="header<%- is('index.html') ? ' header_idx' : ''%>">
+	<h2 class="header_logo">
+		<a href="<%- config.root %>" alt="JDC" title="JDC">HaloJS</a>
+	</h2>
+	<nav>
+		<ul>
+			<li class='<%- is("api") ? "current" : '' %>'>
+				<%- link_to("api/", "文档", {
+					<!-- external: true -->
+				})%>
+			</li>
+			<li class='<%- is("download") ? "current" : '' %>'>
+				<%- link_to("download/", "下载", {
+					<!-- external: true -->
+				})%>
+			</li>
+			<li>
+				<%- link_to("https://github.com/o2team/halojs", "GITHUB", {
+					external: true
+				})%>
+			</li>
+			<li>
+				<%- link_to("http://aotu.io/about/", "关于AOTU", {
+					external: true
+				})%>
+			</li>
+		</ul>
+	</nav>
+</header>
+<!--E 头部-->
