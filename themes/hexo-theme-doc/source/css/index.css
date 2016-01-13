@@ -619,7 +619,8 @@ ul, ol {
 .post_content blockquote {
 	margin: 25px 0;
 	padding: 0 1.75em;
-	border-left: solid .4em #666;
+	border-left: solid .4em #ddd;
+	color: #999;
 }
 
 .post_content .prettyprint {
