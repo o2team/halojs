@@ -1,61 +1,22 @@
 # Site
 title: Hexo
-subtitle:
-description:
 author: o2team
-language:
-timezone:
 
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://aotu.io/halojs/
 root: /halojs/
 permalink: api/:title.html
 
-
-# Writing
 new_post_name: :title.md # File name of new posts
-default_layout: doc
-titlecase: false # Transform title into titlecase
+default_layout: post
 external_link: true # Open external links in new tab
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
-future: true
 highlight:
   enable: false
-  line_number: true
-  auto_detect: true
-  tab_replace: true
-
 skip_render:
   - demo/**
   - src/**
 
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
-
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
-
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 0
-pagination_dir: page
-
-#theme: landscape
 theme: hexo-theme-doc
 
-
-# Deployment
-## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: https://github.com/o2team/halojs.git

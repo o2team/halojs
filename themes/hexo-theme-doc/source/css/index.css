@@ -692,7 +692,7 @@ ul, ol {
 
 .post_content .prettyprint code {
 	color: inherit;
-	font-size: 13px;
+	font-size: 12px;
 	background: inherit;
 }
 
@@ -957,7 +957,7 @@ ul, ol {
 .dtxt {
 	width: 840px;
 	text-indent: 10px;
-	font-size: 18px;
+	font-size: 14px;
 	margin: 30px auto;
 }
 
