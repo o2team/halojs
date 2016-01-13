@@ -1,10 +1,36 @@
 /*public*/
-*{
-	 -webkit-tap-highlight-color: transparent;
-	 outline: 0;
-	 vertical-align: baseline;
+
+* {
+	-webkit-tap-highlight-color: transparent;
+	outline: 0;
+	vertical-align: baseline;
 }
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
 	margin: 0;
 	padding: 0;
 	vertical-align: baseline;
@@ -46,17 +72,36 @@ h6 {
 	margin: 0;
 }
 
-section, nav, header, footer, aside {
+section,
+nav,
+header,
+footer,
+aside,
+main {
 	display: block;
 }
 
-input[type="text"], textarea {
+input[type="text"],
+textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 }
-input, select, button, h1, h2, h3, h4, h5, h6 {
+
+input,
+select,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: inherit;
+}
+
+ul, ol {
+	list-style: none;
 }
 
 .fix {
@@ -71,7 +116,6 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	visibility: hidden;
 }
 
-
 .wrapper {
 	width: 100%;
 	height: 100%;
@@ -80,6 +124,8 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
 }
+
+
 /*header*/
 
 .header {
@@ -141,7 +187,8 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	-webkit-transition: background linear .1s;
 	transition: background linear .1s;
 }
-.header nav .current{
+
+.header nav .current {
 	border-bottom: solid 4px #fff;
 }
 
@@ -163,6 +210,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 
 
 /*api侧边栏*/
+
 .api {
 	width: 180px;
 	background: #fff;
@@ -238,14 +286,16 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	color: #b6b6b6;
 }
 
-.api_list_title.current{
+.api_list_title.current {
 	/*color: rgb(192, 192, 192);*/
 	/*background: rgb(97, 144, 232);*/
 }
-.api_list_title.current a{
+
+.api_list_title.current a {
 	color: #bbb;
 }
-.api_list_item.current{
+
+.api_list_item.current {
 	/*border-left: solid 1px rgb(192, 192, 192);*/
 }
 
@@ -281,7 +331,6 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	color: rgb(222, 100, 100);
 }
 
-
 .api_list_search_complete a i {
 	-webkit-transition: color linear 1.5s;
 	transition: color linear 1.5s;
@@ -313,6 +362,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 .api_list .hide {
 	display: none;
 }
+
 
 /*bd*/
 
@@ -361,9 +411,11 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	text-align: left;
 	padding: 6px 12px;
 }
+
 .idx_banner_input_prompt {
 	color: #6DA1EE;
 }
+
 .idx_banner_input_txt:after {
 	content: '';
 	padding-left: 5px;
@@ -371,6 +423,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	-webkit-animation: blink linear infinite 1.2s;
 	animation: blink linear infinite 1.2s;
 }
+
 .idx_banner_input_enter {
 	position: absolute;
 	right: 0;
@@ -380,13 +433,14 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	background: #6DA1EF;
 }
-.idx_banner_input_enter img{
+
+.idx_banner_input_enter img {
 	width: 36px;
 	margin-top: 6px;
 }
 
 .idx_info,
-.idx_intro{
+.idx_intro {
 	text-align: center;
 	padding: 40px 0 50px;
 }
@@ -397,7 +451,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	padding: 20px 0 0;
 }
 
-.idx_intro_list{
+.idx_intro_list {
 	width: 100%;
 	max-width: 990px;
 	margin: auto;
@@ -412,7 +466,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	padding: 20px;
 }
 
-.idx_intro_list li p{
+.idx_intro_list li p {
 	color: #999;
 	font-size: 12px;
 }
@@ -426,6 +480,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	background-color: #fff;
 }
+
 .idx_intro_licon img {
 	position: absolute;
 	left: 50%;
@@ -446,15 +501,18 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	margin: 0 20px;
 }
 
-.idx_info_qrcode img{
+.idx_info_qrcode img {
 	height: 200px;
 }
+
 .idx_info_desc {
 	font-size: 16px;
 }
+
 .idx_info_wechat {
 	font-size: 12px;
 }
+
 .idx_info_wechat img {
 	width: 24px;
 	height: 24px;
@@ -577,7 +635,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 .post_content code {
 	padding: 0 0.2em;
 	color: #000;
-	background: rgba(0,0,0,0.04);
+	background: rgba(0, 0, 0, 0.04);
 }
 
 .post_content_error {
@@ -626,13 +684,12 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	border: 1px solid #ddd;
 }
 
-
 .post_content .prettyprint code {
 	color: inherit;
 	background: inherit;
 }
 
-.post_content_demo{
+.post_content_demo {
 	padding: 12px;
 	background: #f4f4f4;
 }
@@ -643,7 +700,8 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	height: 35px;
 	padding: 0 12px;
 	line-height: 35px;
-	box-sizing: border-box;;
+	box-sizing: border-box;
+	;
 	border: solid 1px #ccc;
 	border-radius: 5px;
 	text-align: center;
@@ -651,7 +709,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 }
 
 .post_content_demo a:hover,
-.post_content_dbtn:hover{
+.post_content_dbtn:hover {
 	text-decoration: none;
 	background: #eee;
 }
@@ -673,7 +731,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	margin-right: 4px;
 }
 
-.post_content_dbtn div{
+.post_content_dbtn div {
 	display: block;
 	visibility: hidden;
 	position: absolute;
@@ -704,7 +762,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	margin-top: 50px;
 }
 
-.panel{
+.panel {
 	display: none;
 	position: fixed;
 	width: 250px;
@@ -720,7 +778,6 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	transition: transform .5s;
 	z-index: 1;
 }
-
 
 .panel_hd {
 	position: relative;
@@ -788,20 +845,20 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	-webkit-overflow-scrolling: touch;
 }
 
-.panel_list_item a{
+.panel_list_item a {
 	display: block;
 	padding: 12px 6px;
 	text-indent: 10px;
 	color: #777;
 }
+
 .panel_list_title {
 	color: #555;
 }
 
-.panel_list .current a{
+.panel_list .current a {
 	color: #6691E4;
 }
-
 
 .menu {
 	position: absolute;
@@ -815,6 +872,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	-webkit-transition: -webkit-transform .5s;
 	transition: transform .5s;
 }
+
 .menu span,
 .menu span:before,
 .menu span:after {
@@ -823,12 +881,14 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
+
 .menu span {
 	left: 50%;
 	top: 50%;
 	width: 22px;
 	height: 2px;
 }
+
 .menu span:before {
 	content: '';
 	right: 0;
@@ -838,10 +898,10 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	-webkit-transform-origin: right top;
 	transform-origin: right top;
 	-webkit-transform: translateY(-6px);
-	transform: translateY(-6px)
-	-webkit-transition: -webkit-transform 0.5s, width 0.5s, top 0.3s;
+	transform: translateY(-6px) -webkit-transition: -webkit-transform 0.5s, width 0.5s, top 0.3s;
 	transition: transform 0.5s, width 0.5s, top 0.3s;
 }
+
 .menu span:after {
 	content: '';
 	right: 0;
@@ -856,34 +916,38 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	transition: transform 0.5s, width 0.5s, top 0.3s;
 }
 
-.open_panel .panel{
+.open_panel .panel {
 	-webkit-transform: translate(0, 0);
 	transform: translate(0, 0);
 }
-.open_panel .menu{
+
+.open_panel .menu {
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
-.open_panel .menu span:before{
+
+.open_panel .menu span:before {
 	width: 50%;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
+
 .open_panel .menu span:after {
 	width: 50%;
 	-webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 
 /*download*/
+
 .dl {
 	width: 100%;
 	padding-top: 70px;
 	margin: auto;
 }
 
-.dtxt{
+.dtxt {
 	width: 840px;
 	text-indent: 10px;
 	font-weight: 900;
@@ -898,19 +962,22 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	margin: auto;
 }
 
-.dlist_item{
+.dlist_item {
+	display: block;
 	float: left;
 	margin: 20px 10px;
 	padding: 3px;
 	border: solid 1px #bbb;
 }
-.dlist_item div{
+
+.dlist_item div {
 	position: relative;
 	width: 252px;
 	height: 40px;
 	line-height: 40px;
 	overflow: hidden;
 }
+
 .dlist_item_doc {
 	display: block;
 	position: absolute;
@@ -924,26 +991,29 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	-webkit-transition: left ease .1s;
 	transition: left ease .1s;
 }
+
 .j_dlist_item_on .dlist_item_doc {
 	left: 50%;
 }
 
 .dlist_item_doc:before,
-.dlist_item_doc:after{
+.dlist_item_doc:after {
 	content: '';
 	position: absolute;
 	width: 0;
 	height: 0;
 	top: 0;
 }
-.dlist_item_doc:before{
+
+.dlist_item_doc:before {
 	right: 100%;
 	border-top: solid 20px rgb(185, 45, 45);
 	border-right: solid 5px rgb(102, 145, 228);
 	border-bottom: solid 20px rgb(102, 145, 228);
 	border-left: solid 5px rgb(185, 45, 45);
 }
-.dlist_item_doc:after{
+
+.dlist_item_doc:after {
 	left: 100%;
 	border-top: solid 20px rgb(102, 145, 228);
 	border-right: solid 5px rgb(105, 105, 105);
@@ -961,14 +1031,16 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	cursor: pointer;
 }
+
 .dlist_item_toggleon {
 	background: rgb(105, 105, 105);
 }
+
 .dlist_item_toggleoff {
 	background: rgb(185, 45, 45);
 }
 
-.dbtn{
+.dbtn {
 	position: relative;
 	width: 200px;
 	height: 80px;
@@ -984,6 +1056,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	-webkit-transition: background linear .05s;
 	transition: background linear .05s;
 }
+
 .dbtn a {
 	position: absolute;
 	display: block;
@@ -993,20 +1066,22 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 }
 
 .dbtn a:before,
-.dbtn a:after{
+.dbtn a:after {
 	content: '';
 	position: absolute;
 	top: 0;
 	-webkit-transition: border-color linear .05s;
 	transition: border-color linear .05s;
 }
-.dbtn a:before{
+
+.dbtn a:before {
 	left: 0;
 	border-top: solid 40px rgb(122, 165, 248);
 	border-right: none;
 	border-bottom: solid 40px rgb(102, 145, 228);
 	border-left: solid 8px rgb(102, 145, 228);
 }
+
 .dbtn a:after {
 	right: 0;
 	border-top: solid 40px rgb(122, 165, 248);
@@ -1014,6 +1089,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	border-bottom: solid 40px rgb(102, 145, 228);
 	border-left: none;
 }
+
 .dbtn:before {
 	content: '';
 	display: block;
@@ -1026,30 +1102,49 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	-webkit-transition: background linear .05s;
 	transition: background linear .05s;
 }
+
 .dbtn:hover {
 	background: rgb(112, 155, 238);
 }
+
 .dbtn:hover:before {
 	background: rgb(147, 190, 255);
 }
 
 .dbtn:hover a:before,
-.dbtn:hover a:after{
+.dbtn:hover a:after {
 	border-top-color: rgb(147, 190, 255);
 	border-bottom-color: rgb(112, 155, 238);
 }
 
 @-webkit-keyframes blink {
-	0%{border-right-color: #fff;}
-	49.9%{border-right-color: #fff;}
-	50%{border-right-color: #666;}
-	100%{border-right-color: #666;}
+	0% {
+		border-right-color: #fff;
+	}
+	49.9% {
+		border-right-color: #fff;
+	}
+	50% {
+		border-right-color: #666;
+	}
+	100% {
+		border-right-color: #666;
+	}
 }
+
 @keyframes blink {
-	0%{border-right-color: #fff;}
-	49.9%{border-right-color: #fff;}
-	50%{border-right-color: #666;}
-	100%{border-right-color: #666;}
+	0% {
+		border-right-color: #fff;
+	}
+	49.9% {
+		border-right-color: #fff;
+	}
+	50% {
+		border-right-color: #666;
+	}
+	100% {
+		border-right-color: #666;
+	}
 }
 
 @media (max-width: 840px) {
@@ -1057,10 +1152,10 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 		font-size: 12px;
 	}
 	.dlist,
-	.dtxt{
+	.dtxt {
 		width: 560px;
 	}
-	.dlist_item{
+	.dlist_item {
 		margin: 10px;
 	}
 	.dlist_item div {
@@ -1068,6 +1163,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 		line-height: 30px;
 	}
 }
+
 @media (max-width: 720px) {
 	.api {
 		display: none;
@@ -1079,14 +1175,16 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 		display: block;
 	}
 }
+
 @media (max-width: 560px) {
-	.dlist{
+	.dlist {
 		width: 280px;
 	}
-	.dtxt{
+	.dtxt {
 		width: 100%;
 	}
 }
+
 @media (max-width: 500px) {
 	.header {
 		position: absolute;
@@ -1121,7 +1219,7 @@ input, select, button, h1, h2, h3, h4, h5, h6 {
 	.post {
 		margin: 0 20px 20px;
 	}
-	.idx{
+	.idx {
 		padding-top: 0;
 	}
 	.idx_banner h1 {
