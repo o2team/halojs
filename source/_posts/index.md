@@ -6,8 +6,7 @@ ignore: true
 
 ## Installation
 
-首先将源码下下来
-`git clone https://github.com/o2team/haloDoc.git haloDoc`
+首先将源码下下来`git clone https://github.com/o2team/haloDoc.git haloDoc`
 
 **安装依赖**
 ```bsh

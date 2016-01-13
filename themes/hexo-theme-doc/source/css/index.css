@@ -632,11 +632,13 @@ ul, ol {
 }
 
 .post_content code {
-	padding: 2px 3px 3px;
+	padding: 1px 5px;
 	border-radius: 3px;
-	color: #999;
+	color: #666;
+	font-size: 85%;
 	line-height: 1.7;
-	background: rgb(240, 240, 240);
+	vertical-align: 1px;
+	background: #f6f6f6;
 }
 
 .post_content_error {
