@@ -549,7 +549,7 @@ ul, ol {
 
 .post_title {
 	border-bottom: solid 1px #ddd;
-	color: #333;
+	color: #555;
 }
 
 .post_title_edit {
@@ -599,7 +599,7 @@ ul, ol {
 .post_content h5,
 .post_content h6 {
 	position: relative;
-	color: #333;
+	color: #555;
 	margin: 1.5em 0 .67em;
 }
 
@@ -619,7 +619,7 @@ ul, ol {
 .post_content blockquote {
 	margin: 25px 0;
 	padding: 0 1.75em;
-	border-left: solid .4em #333;
+	border-left: solid .4em #666;
 }
 
 .post_content .prettyprint {
@@ -631,9 +631,11 @@ ul, ol {
 }
 
 .post_content code {
-	padding: 0 0.2em;
-	color: #000;
-	background: rgba(0, 0, 0, 0.04);
+	padding: 2px 3px 3px;
+	border-radius: 3px;
+	color: #999;
+	line-height: 1.7;
+	background: rgb(240, 240, 240);
 }
 
 .post_content_error {
