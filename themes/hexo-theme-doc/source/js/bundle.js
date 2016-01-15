@@ -306,8 +306,8 @@ module.exports = (function () {
 
 		$dl.on('click', function (evt) {
 			var href = [],
-				obj = {uncmd: true},
-				url = [];
+				obj = {},
+				url = ['uncmd.js'];
 
 			$('.j_dlist_item_on').each(function (idx, el) {
 				href.push($(el).data('src'));
@@ -336,13 +336,13 @@ module.exports = (function () {
 					root: 'http://wq.360buyimg.com/js/ho2/min/',
 					files: JSON.stringify(url),
 					download_name: 'halojs.js',
-					isCompress: 1,
+					isCompress: 0,
 					isDownload: 1,
 					encoding: 'utf8'
 					// version: util.randomStr(16)
 				},
 				success: function (data) {
-					window.open(data.url);
+					window.open(data.url, '_blank');
 				}
 			});
 		});
