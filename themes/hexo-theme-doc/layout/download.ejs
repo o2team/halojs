@@ -1,11 +1,11 @@
 <%- partial("partial/header.ejs") %>
 <div class='bd dl'>
-    <div class="dtxt">
-        <%- page.content %>
-    </div>
-    <%- download_list() %>
-    <div class='dbtn'>
-        <a id='j_dl' href='javascript:;' target='_blank'>打包下载</a>
-    </div>
+	<div class="dtxt">
+		<%- page.content %>
+	</div>
+	<%- download_list(environment) %>
+	<div class='dbtn'>
+		<a id='j_dl' href='javascript:;' target='_blank'>打包下载</a>
+	</div>
 </div>
 <%- partial("partial/footer.ejs") %>

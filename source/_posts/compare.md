@@ -54,8 +54,3 @@ alert($.compare({obj1:test1,obj2:test2})?"相等":"不相等");
 ## DEMO
 
 {% demo demo/compare.html 点击查看compare %}
-
-
-
-
-

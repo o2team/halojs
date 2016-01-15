@@ -1,3 +1,0 @@
-title: haloTest
-layout: index
-------

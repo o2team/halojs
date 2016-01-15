@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>HO2 - mcoss - demo</title>
+    <style>
+    html,body{width:100%; height:100%; overflow:hidden; margin: 0; padding: 0; text-align: center;}
+    textarea{display: block; width: 300px; height: 300px; border: 1px solid #300; margin: 20px auto;}
+    .btn{display: block; width: 200px; height: 30px; line-height: 30px; text-align: center; margin: 10px auto; text-decoration: none; border-radius: 3px; background-color: #3985ff; color: #fff;}
+    </style>
+
+</head>
+<body ontouchstart>
+<textarea id="js">$.mcoss(
+    {
+        data:{
+            actid: '61887',
+            areaid:'99562,99563',
+            pc:100,//如果没有限定数量的话，默认传100
+            pcs:0//这个参数保证返回数据的绝对正确
+        },
+        callback:function(json){
+            //TODO
+            //数据分类
+            var ret=json.errCode;
+            if("0"!=ret){
+                return ;
+            }
+            alert("拉取成功！总共有条"+json.data.list.length+"记录");
+        }
+    }
+);</textarea>
+<a href="javascript:;" id="update" class="btn">运行</a>
+
+<script type="text/javascript" src="http://wq.360buyimg.com/js/ho2/zepto.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/ho2.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/dev/cookie.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/dev/request.js"></script>
+
+<script src="http://wq.360buyimg.com/js/ho2/dev/jsonp.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/bussiness/mcoss.js"></script>
+<script type="text/javascript">
+$("#update").click(function(){
+    eval($("#js").val());
+});
+</script>
+</body>
+</html>

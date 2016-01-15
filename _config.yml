@@ -6,17 +6,37 @@ url: http://aotu.io/halojs/
 root: /halojs/
 permalink: api/:title.html
 
-new_post_name: :title.md # File name of new posts
+new_post_name: :title.md
 default_layout: post
-external_link: true # Open external links in new tab
-highlight:
-  enable: false
+external_link: true
+highlight: false
+public_dir: public
 skip_render:
   - demo/**
-  - src/**
+  # - src/**
+  - '!src/README.md'
+
 
 theme: hexo-theme-doc
 
 deploy:
-  type: git
-  repo: https://github.com/o2team/halojs.git
+  - type: git
+    repo: https://github.com/o2team/halojs.git
+  # - type: git
+  # 	repo: http://source.jd.com/app/halojs.git
+  # - type: ftpsync
+  #   host: 0.0.0.0
+  #   user: <user>
+  #   pass: <password>
+  #   remote: [remote]
+  #   port: [port]
+  #   ignore: [ignore]
+  #   connections: [connections]
+  #   verbose: [true|false]
+
+# custom settings
+internal_port: 3000
+internal_dir: internal
+
+external_port: 3001
+external_dir: external

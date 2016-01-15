@@ -1,0 +1,102 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0'>
+	<title>
+		
+		下载 | HALOJS
+	</title>
+	<script>
+		Array.prototype.forEach = [].forEach || function (func) {
+			var len = this.length,
+				i = 0;
+			while (i < len) {
+				func.call(this, this[i], i, this);
+				i++;
+			}
+		};
+		Array.prototype.filter = [].filter || function (func) {
+			var len = this.length,
+				i = 0,
+				result = [];
+			while (i < len) {
+				if (func.call(this, this[i], i, this)) {
+					result.push(this[i]);
+				}
+				i++;
+			}
+			return result;
+		};
+		['aside', 'header', 'footer', 'nav', 'section', 'main'].forEach(function (val) {
+			document.createElement(val);
+		});
+		String.prototype.trim = String.prototype.trim || function () {
+			return this.replace(/^ *([\s\S]+?) *$/g, function (m, g1) {
+				return g1;
+			});
+		};
+	</script>
+	<link rel="stylesheet" href="/halojs/css/index.css" type="text/css">
+	<link rel="stylesheet" href="/halojs/css/prettify.css" type="text/css">
+</head>
+
+<body>
+	<!--S 头部-->
+<header id='j_header' class="header">
+	<h2 class="header_logo">
+		<a href="/halojs/" alt="JDC" title="JDC">HaloJS</a>
+	</h2>
+	<nav>
+		<ul>
+			<li class=''>
+				<a href="/halojs/api/" title="文档">文档</a>
+			</li>
+			<li class='current'>
+				<a href="/halojs/download/" title="下载">下载</a>
+			</li>
+			<li>
+				<a href="https://github.com/o2team/halojs" title="GITHUB" target="_blank" rel="external">GITHUB</a>
+			</li>
+			<li>
+				<a href="http://aotu.io/about/" title="关于凹凸" target="_blank" rel="external">关于凹凸</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+<!--E 头部-->
+
+<div class='bd dl'>
+	<div class="dtxt">
+		<p><strong>选择模块打包下载(默认打包所有组件)</strong></p>
+
+	</div>
+	<ul id="j_dlist" class="dlist"><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/prefix.html" data-src="/js/ho2/min/prefix.js" target="_blank" title="点击查看文档">prefix</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/cardSlider.html" data-src="/js/ho2/min/cardSlider.js" target="_blank" title="点击查看文档">cardSlider</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/compare.html" data-src="/js/ho2/min/compare.js" target="_blank" title="点击查看文档">compare</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/cookie.html" data-src="/js/ho2/min/cookie.js" target="_blank" title="点击查看文档">cookie</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/PCPrompt.html" data-src="/js/ho2/min/PCPrompt.js" target="_blank" title="点击查看文档">PCPrompt</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/randomSort.html" data-src="/js/ho2/min/randomSort.js" target="_blank" title="点击查看文档">randomSort</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/remember.html" data-src="/js/ho2/min/remember.js" target="_blank" title="点击查看文档">remember</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/loader.html" data-src="/js/ho2/min/loader.js" target="_blank" title="点击查看文档">loader</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/request.html" data-src="/js/ho2/min/request.js" target="_blank" title="点击查看文档">request</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/enablea.html" data-src="/js/ho2/min/enablea.js" target="_blank" title="点击查看文档">enablea</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/urlAppend.html" data-src="/js/ho2/min/urlAppend.js" target="_blank" title="点击查看文档">urlAppend</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/parallaxSlider.html" data-src="/js/ho2/min/parallaxSlider.js" target="_blank" title="点击查看文档">parallaxSlider</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/isDom.html" data-src="/js/ho2/min/isDom.js" target="_blank" title="点击查看文档">isDom</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/warn.html" data-src="/js/ho2/min/warn.js" target="_blank" title="点击查看文档">warn</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/shareTips.html" data-src="/js/ho2/min/shareTips.js" target="_blank" title="点击查看文档">shareTips</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/textMarquee.html" data-src="/js/ho2/min/textMarquee.js" target="_blank" title="点击查看文档">textMarquee</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/launchApp.html" data-src="/js/ho2/min/launchApp.js" target="_blank" title="点击查看文档">launchApp</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/objectUpdate.html" data-src="/js/ho2/min/objectUpdate.js" target="_blank" title="点击查看文档">objectUpdate</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/stylesheet.html" data-src="/js/ho2/min/stylesheet.js" target="_blank" title="点击查看文档">stylesheet</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/dialog.html" data-src="/js/ho2/min/dialog.js" target="_blank" title="点击查看文档">dialog</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/jsonp.html" data-src="/js/ho2/min/jsonp.js" target="_blank" title="点击查看文档">jsonp</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/imgPlayer.html" data-src="/js/ho2/min/imgPlayer.js" target="_blank" title="点击查看文档">imgPlayer</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/ezLoader.html" data-src="/js/ho2/min/ezLoader.js" target="_blank" title="点击查看文档">ezLoader</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/numberScroll.html" data-src="/js/ho2/min/numberScroll.js" target="_blank" title="点击查看文档">numberScroll</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/ezScroll.html" data-src="/js/ho2/min/ezScroll.js" target="_blank" title="点击查看文档">ezScroll</a></div></li><li class="j_dlist_item dlist_item"><div><span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span><span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span><a class="dlist_item_doc" href="/halojs/api/getTransfromValue.html" data-src="/js/ho2/min/getTransfromValue.js" target="_blank" title="点击查看文档">getTransfromValue</a></div></li></ul>
+	<div class='dbtn'>
+		<a id='j_dl' href='javascript:;' target='_blank'>打包下载</a>
+	</div>
+</div>
+<!--S 底部-->
+<footer class="footer">
+	<div class="footer-sec copyright">
+		© 2016 <a href="http://aotu.io" target="_blank">凹凸实验室</a><br>
+		Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+	</div>
+</footer>
+<!--E 底部-->
+
+
+	<script type="text/javascript">
+		window.hexo = {};
+		hexo.config = JSON.parse(
+			'{"title":"Hexo","subtitle":"","description":"","author":"o2team","language":"","timezone":"","url":"http://aotu.io/halojs","root":"/halojs/","permalink":"api/:title.html","permalink_defaults":{},"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":["demo/**","src/**"],"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":false,"default_category":"uncategorized","category_map":{},"tag_map":{},"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"hexo-theme-doc","deploy":[{"type":"git","repo":"https://github.com/o2team/halojs.git"}],"internal_port":3000,"internal_dir":"internal","external_port":3001,"external_dir":"external","index_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true},"server":{"log":false,"ip":"0.0.0.0"}}'
+		);
+		hexo.theme = JSON.parse(
+			'{"title":"Hexo","subtitle":"","description":"","author":"o2team","language":"","timezone":"","url":"http://aotu.io/halojs","root":"/halojs/","permalink":"api/:title.html","permalink_defaults":{},"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":["demo/**","src/**"],"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":false,"default_category":"uncategorized","category_map":{},"tag_map":{},"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"hexo-theme-doc","deploy":[{"type":"git","repo":"https://github.com/o2team/halojs.git"}],"internal_port":3000,"internal_dir":"internal","external_port":3001,"external_dir":"external","index_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true},"server":{"log":false,"ip":"0.0.0.0"},"Comment":"Disqus"}'
+		);
+		hexo.path = 'download/index.html';
+	</script>
+	<script src="/halojs/js/bundle.js" type="text/javascript"></script>
+</body>
+
+</html>
