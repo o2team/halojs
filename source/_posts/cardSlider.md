@@ -1,9 +1,16 @@
 title: 'cardSlider'
 order: 1
 group: 翻页模块
+<<<<<<< HEAD
 deps:
 	- compare
 	- cookie
+=======
+beta: 0
+deps: 
+    - prefix
+    - isDom
+>>>>>>> 936ca641940a98674b9c34e28da374079ef67daf
 ---
 
 ## 功能
@@ -84,3 +91,9 @@ $("#wrap").cardSlider(
 ## DEMO
 
 {% demo demo/cardSlider.html 点击查看cardSlider %}
+
+<!--## 模块下载
+
+[直接下载cardSlider](#)
+线上地址： <input type="text" value="#" /> <input type="button" value="复制" />-->
+

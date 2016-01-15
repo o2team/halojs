@@ -1,6 +1,12 @@
 title: 'imgPlayer'
 order: 20
 group: UI模块
+deps:
+	- prefix
+	- klass
+	- stylesheet
+	- css
+	- isDom
 ---
 
 ## 功能
