@@ -1,6 +1,8 @@
 title: 'shareTips'
 order: 14
 group: UI模块
+deps: 
+	- prefix
 ---
 
 ## 功能

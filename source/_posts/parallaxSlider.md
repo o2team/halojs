@@ -1,6 +1,10 @@
 title: 'parallaxSlider'
 order: 11
 group: 翻页模块
+deps:
+    - prefix
+    - isDom
+    - stylesheet
 ---
 
 ## 功能

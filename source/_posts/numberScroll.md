@@ -1,6 +1,8 @@
 title: 'numberScroll'
 order: 22
 group: UI模块
+deps:
+    - prefix
 ---
 
 ## 功能

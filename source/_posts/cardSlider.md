@@ -2,6 +2,9 @@ title: 'cardSlider'
 order: 1
 group: 翻页模块
 beta: 0
+deps: 
+    - prefix
+    - isDom
 ---
 
 ## 功能

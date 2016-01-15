@@ -1,6 +1,8 @@
 title: 'ezLoader'
 order: 21
 group: 基础模块
+deps: 
+	- prefix
 ---
 
 ## 功能

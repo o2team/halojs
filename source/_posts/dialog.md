@@ -1,6 +1,12 @@
 title: 'dialog'
 order: 19
 group: UI模块
+deps: 
+    - enablea
+    - compare
+    - stylesheet
+    - compare
+    - prefix
 ---
 
 ## 作用

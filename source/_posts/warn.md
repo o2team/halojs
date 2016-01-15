@@ -1,6 +1,9 @@
 title: 'warn'
 order: 13
 group: UI模块
+deps:
+	- prefix
+	- stylesheet
 ---
 
 ## 功能

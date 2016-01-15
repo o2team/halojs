@@ -1,6 +1,10 @@
 title: 'textMarquee'
 order: 15
 group: UI模块
+deps: 
+	- prefix
+	- stylesheet
+	- isDom
 ---
 
 ## 功能
