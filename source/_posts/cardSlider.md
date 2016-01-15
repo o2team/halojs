@@ -1,16 +1,10 @@
 title: 'cardSlider'
 order: 1
 group: 翻页模块
-<<<<<<< HEAD
-deps:
-	- compare
-	- cookie
-=======
 beta: 0
-deps: 
+deps:
     - prefix
     - isDom
->>>>>>> 936ca641940a98674b9c34e28da374079ef67daf
 ---
 
 ## 功能
@@ -96,4 +90,3 @@ $("#wrap").cardSlider(
 
 [直接下载cardSlider](#)
 线上地址： <input type="text" value="#" /> <input type="button" value="复制" />-->
-
