@@ -321,8 +321,8 @@ module.exports = (function () {
 				obj[val] = true;
 			});
 			if (href.length === 0) {
-				$('.j_dlist_item a').each(function (idx, el) {
-					href.push($(el).data('src'));
+				$('.j_dlist_item').each(function (idx, el) {
+					obj[$(el).data('src')] = true;
 				});
 			}
 			for (var i in obj) {
