@@ -13,8 +13,7 @@ highlight: false
 public_dir: public
 skip_render:
   - demo/**
-  # - src/**
-  - '!src/README.md'
+  - src/**
 
 
 theme: hexo-theme-doc
