@@ -1,6 +1,9 @@
 title: 'cardSlider'
 order: 1
 group: 翻页模块
+deps:
+	- compare
+	- cookie
 ---
 
 ## 功能

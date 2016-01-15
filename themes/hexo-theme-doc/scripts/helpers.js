@@ -75,11 +75,14 @@ hexo.extend.helper.register('download_list', function (environment) {
 		}
 		return val.group === '业务模块' ? false : true;
 	}).forEach(function (val, idx, arr) {
-		str.push('<li class="j_dlist_item dlist_item">')
+		str.push('<li id="dl_' + val.title + '" class="j_dlist_item dlist_item" '
+				+ (val.deps ? 'data-deps="' + val.deps.join(' ') + '" ' : '')
+				+ 'data-src="' + val.title +'"'
+			 + '">')
 		str.push('<div>');
 		str.push('<span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span>');
 		str.push('<span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span>');
-		str.push('<a class="dlist_item_doc" href="' + that.url_for(val.path) + '" data-src="/js/ho2/min/' + val.title +'.js" target="_blank" title="点击查看文档">' + val.title + '</a>');
+		str.push('<a class="dlist_item_doc" href="' + that.url_for(val.path) + '" target="_blank" title="点击查看文档">' + val.title + '</a>');
 		str.push('</div>');
 		str.push('</li>');
 	});

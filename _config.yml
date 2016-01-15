@@ -21,17 +21,6 @@ theme: hexo-theme-doc
 deploy:
   - type: git
     repo: https://github.com/o2team/halojs.git
-  # - type: git
-  # 	repo: http://source.jd.com/app/halojs.git
-  # - type: ftpsync
-  #   host: 0.0.0.0
-  #   user: <user>
-  #   pass: <password>
-  #   remote: [remote]
-  #   port: [port]
-  #   ignore: [ignore]
-  #   connections: [connections]
-  #   verbose: [true|false]
 
 # custom settings
 internal_port: 3000
