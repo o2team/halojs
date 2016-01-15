@@ -1,6 +1,7 @@
 title: 'cardSlider'
 order: 1
 group: 翻页模块
+beta: 0
 ---
 
 ## 功能
@@ -81,3 +82,9 @@ $("#wrap").cardSlider(
 ## DEMO
 
 {% demo demo/cardSlider.html 点击查看cardSlider %}
+
+<!--## 模块下载
+
+[直接下载cardSlider](#)
+线上地址： <input type="text" value="#" /> <input type="button" value="复制" />-->
+
