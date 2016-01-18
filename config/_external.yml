@@ -1,0 +1,25 @@
+# Site
+title: Hexo
+author: o2team
+
+url: http://aotu.io/halojs/external
+root: /halojs/external
+permalink: api/:title.html
+
+new_post_name: :title.md
+default_layout: post
+external_link: true
+highlight: false
+public_dir: external
+skip_render:
+    - demo/**
+    - src/**
+
+
+theme: hexo-theme-doc
+
+deploy:
+    - type: git
+      repo: https://github.com/o2team/halojs.git
+
+environment: external

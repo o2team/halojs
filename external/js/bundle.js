@@ -282,18 +282,22 @@ module.exports = {
 };
 
 },{"./google_code_prettify":5,"./jquery":6,"./util":7}],4:[function(require,module,exports){
-var $ = require('./jquery')
+var $ = require('./jquery'),
+	util = require('./util');
 module.exports = (function () {
 	var _bind,
 		$mlist,
-		$dl;
+		$dl,
+		$btns;
 
 	$mlist = $('#j_dlist');
 	$dl = $('#j_dl');
+	$btns = $('#j_dtxt');
 
 	_bind = function () {
 		$mlist.on('click', function (evt) {
-			var $target = $(evt.target)
+			var $target = $(evt.target),
+				deps = $target.closest('.j_dlist_item').data('deps');
 			if ($target.is('.j_dlist_toggleon')) {
 				$target.closest('.j_dlist_item').addClass('j_dlist_item_on');
 			}
@@ -303,33 +307,65 @@ module.exports = (function () {
 		});
 
 		$dl.on('click', function (evt) {
-			var href = ['uncmd.js'];
-			// var href = [];
-			$('.j_dlist_item_on a').each(function (idx, el) {
+			var href = [],
+				obj = {},
+				url = ['uncmd.js'];
+
+			$('.j_dlist_item_on').each(function (idx, el) {
 				href.push($(el).data('src'));
+				if ($(el).data('deps')) {
+					$.each($(el).data('deps').split(' '), function (idx, val) {
+						href.push(val);
+					});
+				}
+			});
+			$.each(href, function (idx, val) {
+				obj[val] = true;
 			});
 			if (href.length === 0) {
-				$('.j_dlist_item a').each(function (idx, el) {
-					href.push($(el).data('src'));
+				$('.j_dlist_item').each(function (idx, el) {
+					obj[$(el).data('src')] = true;
 				});
+			}
+			for (var i in obj) {
+				url.push(i + '.js');
 			}
 			$.ajax({
 				url: 'http://aotu.jd.com/common/api/rcombo',
 				type: 'POST',
 				async: false,
 				data: {
-					root: 'http://wq.360buyimg.com',
-					files: JSON.stringify(href),
+					root: 'http://wq.360buyimg.com/js/ho2/min/',
+					files: JSON.stringify(url),
 					download_name: 'halojs.js',
-					isCompress: 1,
+					isCompress: 0,
 					isDownload: 1,
 					encoding: 'utf8'
+					// version: util.randomStr(16)
 				},
 				success: function (data) {
-					window.open(data.url);
+					window.open(data.url, '_blank');
 				}
 			});
 		});
+
+		$btns.on('click', function (evt) {
+			if ($(evt.target).hasClass('j_dtxt_sa')) {
+				$('.j_dlist_item', $mlist).addClass('j_dlist_item_on');
+				return;
+			}
+			if ($(evt.target).hasClass('j_dtxt_sr')) {
+				$('.j_dlist_item', $mlist).each(function (idx, el) {
+					if ($(el).hasClass('j_dlist_item_on')) {
+						$(el).removeClass('j_dlist_item_on');
+					}
+					else {
+						$(el).addClass('j_dlist_item_on');
+					}
+				})
+				return;
+			}
+		})
 	}
 	var init = function () {
 		_bind();
@@ -339,7 +375,7 @@ module.exports = (function () {
 	}
 })()
 
-},{"./jquery":6}],5:[function(require,module,exports){
+},{"./jquery":6,"./util":7}],5:[function(require,module,exports){
 ! function () {
 	var q = null;
 	window.PR_SHOULD_USE_CONTINUATION = !0;

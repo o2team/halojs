@@ -1,4 +1,4 @@
-hexo.extend.helper.register('sidebar', function (className, environment) {
+hexo.extend.helper.register('sidebar', function (className) {
 	var that,
 		group,
 		groups,
@@ -11,8 +11,7 @@ hexo.extend.helper.register('sidebar', function (className, environment) {
 		addGroup;
 
 	that = this;
-	type = that.page.path.split('/')[0];
-	groups = that.site.data.sidebar[type];
+	groups = that.site.data.sidebar;
 	pagelink = that.page.canonical_path.split('/').pop();
 	pagetitle = that.page.title;
 	str = [];
@@ -47,7 +46,7 @@ hexo.extend.helper.register('sidebar', function (className, environment) {
 		};
 	};
 	groups.forEach(function (val) {
-		if (environment === 'external' && val === '业务模块') {
+		if (that.config.environment === 'external' && val === '业务模块') {
 			return;
 		}
 		addGroup(false)(val);
@@ -60,33 +59,74 @@ hexo.extend.helper.register('is', function (type) {
 	return this.page.path.split('/')[0] === type;
 });
 
-hexo.extend.helper.register('download_list', function (environment) {
+// hexo.extend.helper.register('download_list', function () {
+// 	var that = this,
+// 		str = [];
+// 	that.site.posts.data.sort(function (a, b) {
+// 		return a.order - b.order;
+// 	});
+// 	str.push('<ul id="j_dlist" class="dlist">');
+// 	that.site.posts.data.filter(function (val) {
+// 		return !val.ignore;
+// 	}).filter(function (val) {
+// 		if (that.config.environment === 'internal') {
+// 			return true;
+// 		}
+// 		return val.group === '业务模块' ? false : true;
+// 	}).forEach(function (val, idx, arr) {
+// 		str.push('<li id="dl_' + val.title + '" class="j_dlist_item dlist_item" '
+// 				+ (val.deps ? 'data-deps="' + val.deps.join(' ') + '" ' : '')
+// 				+ 'data-src="' + val.title +'"'
+// 			 + '">')
+// 		str.push('<div>');
+// 		str.push('<span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span>');
+// 		str.push('<span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span>');
+// 		// str.push('<a class="dlist_item_doc" href="' + that.url_for(val.path) + '" target="_blank" title="点击查看文档">' + val.title + '</a>');
+// 		str.push('<a class="dlist_item_doc" href="javascript:;" target="_blank" title="点击查看文档">' + val.title + '</a>');
+// 		str.push('</div>');
+// 		str.push('</li>');
+// 	});
+// 	str.push('</ul>');
+// 	return str.join('');
+// });
+
+hexo.extend.helper.register('download_list', function () {
 	var that = this,
 		str = [];
 	that.site.posts.data.sort(function (a, b) {
 		return a.order - b.order;
 	});
-	str.push('<ul id="j_dlist" class="dlist">');
-	that.site.posts.data.filter(function (val) {
-		return !val.ignore;
-	}).filter(function (val) {
-		if (environment === 'internal') {
+	str.push('<div id="j_dlist" class="dlist">');
+	that.site.data.sidebar.filter(function (val) {
+		if (that.config.environment === 'external') {
+			return val !== '业务模块';
+		}
+		else {
 			return true;
 		}
-		return val.group === '业务模块' ? false : true;
-	}).forEach(function (val, idx, arr) {
-		str.push('<li id="dl_' + val.title + '" class="j_dlist_item dlist_item" '
-				+ (val.deps ? 'data-deps="' + val.deps.join(' ') + '" ' : '')
-				+ 'data-src="' + val.title +'"'
-			 + '">')
-		str.push('<div>');
-		str.push('<span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span>');
-		str.push('<span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span>');
-		// str.push('<a class="dlist_item_doc" href="' + that.url_for(val.path) + '" target="_blank" title="点击查看文档">' + val.title + '</a>');
-		str.push('<a class="dlist_item_doc" href="javascript:;" target="_blank" title="点击查看文档">' + val.title + '</a>');
-		str.push('</div>');
-		str.push('</li>');
+	}).forEach(function (group) {
+		var arr = that.site.posts.data.filter(function (val) {
+			return !(val.ignore || val.group !== group)
+		});
+		if (arr.length) {
+			str.push('<ul>');
+			str.push('<li class="dlist_title">' + group + '</li>');
+			arr.forEach(function (val) {
+				str.push('<li id="dl_' + val.title + '" class="j_dlist_item dlist_item" '
+						+ (val.deps ? 'data-deps="' + val.deps.join(' ') + '" ' : '')
+						+ 'data-src="' + val.title +'"'
+					 + '">')
+				str.push('<div>');
+				str.push('<span class="j_dlist_toggleoff dlist_item_toggleoff">取消选择</span>');
+				str.push('<span class="j_dlist_toggleon dlist_item_toggleon">点击选择</span>');
+				// str.push('<a class="dlist_item_doc" href="' + that.url_for(val.path) + '" target="_blank" title="点击查看文档">' + val.title + '</a>');
+				str.push('<a class="dlist_item_doc" href="javascript:;" target="_blank">' + val.title + '</a>');
+				str.push('</div>');
+				str.push('</li>');
+			});
+			str.push('</ul>');
+		}
 	});
-	str.push('</ul>');
+	str.push('</div>');
 	return str.join('');
 })

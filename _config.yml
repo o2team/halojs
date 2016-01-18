@@ -2,29 +2,22 @@
 title: Hexo
 author: o2team
 
-url: http://aotu.io/halojs/
-root: /halojs/
+url: http://aotu.io/halojs/help
+root: /halojs/help/
 permalink: api/:title.html
 
 new_post_name: :title.md
 default_layout: post
 external_link: true
 highlight: false
+source_dir: source_help
 public_dir: public
 skip_render:
-  - demo/**
-  - src/**
+    - demo/**
+    - src/**
 
-
-theme: hexo-theme-doc
+theme: hexo-theme-help
 
 deploy:
-  - type: git
-    repo: https://github.com/o2team/halojs.git
-
-# custom settings
-internal_port: 3000
-internal_dir: internal
-
-external_port: 3001
-external_dir: external
+    - type: git
+      repo: https://github.com/o2team/halojs.git

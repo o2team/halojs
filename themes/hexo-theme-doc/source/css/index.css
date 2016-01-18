@@ -962,7 +962,29 @@ ul{
 	width: 840px;
 	text-indent: 10px;
 	font-size: 14px;
-	margin: 30px auto;
+	font-weight: 900;
+	margin: 30px auto 10px;
+	height: 28px;
+	line-height: 28px;
+	background: #e4e4e4;
+}
+
+.dtxt_sa,
+.dtxt_sr {
+	padding: 6px;
+	-webkit-transition: all linear .1s;
+	transition: all linear .1s;
+}
+
+.dtxt_sa:hover {
+	background: #6691E4;
+	color: #fff;
+}
+
+
+.dtxt_sr:hover {
+	background: #B92D2D;
+	color: #fff;
 }
 
 .dlist {
@@ -970,6 +992,15 @@ ul{
 	font-weight: 700;
 	overflow: hidden;
 	margin: auto;
+}
+
+.dlist ul {
+	overflow: hidden;
+	margin: 20px auto;
+}
+
+.dlist_title {
+	padding-left: 10px;
 }
 
 .dlist_item {

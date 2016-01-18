@@ -3,10 +3,12 @@ var $ = require('./jquery'),
 module.exports = (function () {
 	var _bind,
 		$mlist,
-		$dl;
+		$dl,
+		$btns;
 
 	$mlist = $('#j_dlist');
 	$dl = $('#j_dl');
+	$btns = $('#j_dtxt');
 
 	_bind = function () {
 		$mlist.on('click', function (evt) {
@@ -62,6 +64,24 @@ module.exports = (function () {
 				}
 			});
 		});
+
+		$btns.on('click', function (evt) {
+			if ($(evt.target).hasClass('j_dtxt_sa')) {
+				$('.j_dlist_item', $mlist).addClass('j_dlist_item_on');
+				return;
+			}
+			if ($(evt.target).hasClass('j_dtxt_sr')) {
+				$('.j_dlist_item', $mlist).each(function (idx, el) {
+					if ($(el).hasClass('j_dlist_item_on')) {
+						$(el).removeClass('j_dlist_item_on');
+					}
+					else {
+						$(el).addClass('j_dlist_item_on');
+					}
+				})
+				return;
+			}
+		})
 	}
 	var init = function () {
 		_bind();
