@@ -65,14 +65,14 @@ fs.mkdirs = function (dir) {
 		fs.mkdir(dir, function (err) {
 			if (err) {
 				switch (err.code) {
-					case 'ENOENT':
-						fs.mkdirs(Path.resolve(dir, '../'))
-							.then(function () {
-								fs.mkdir(dir, resolve);
-							});
-						break;
-					default:
-						resolve();
+				case 'ENOENT':
+					fs.mkdirs(Path.resolve(dir, '../'))
+						.then(function () {
+							fs.mkdir(dir, resolve);
+						});
+					break;
+				default:
+					resolve();
 				}
 			} else {
 				resolve();
@@ -100,23 +100,20 @@ hexo.theme.process().then(function () {
 });
 
 if (hexo.config.environment === 'external') {
-	hexo.extend.generator.register('gen1', function(locals){
-		return locals.posts.filter(function(post){
+	hexo.extend.generator.register('gen1', function (locals) {
+		return locals.posts.filter(function (post) {
 			return post.group == '业务模块'
-		}).map(function (post) {
-			fs.unlink(Path.join(process.cwd(), hexo.config.public_dir, post.path))
-		});
+		}).map(function (post) {});
 	});
-	hexo.extend.generator.register('gen2', function(locals){
+	hexo.extend.generator.register('gen2', function (locals) {
 		return locals.pages.filter(function (page) {
 			return page.path.startsWith('src/bussiness');
 		}).map(function (page) {
-			// console.log(page.path);
-			// return {
-			// 	path: page.path,
-			// 	data: page,
-			// 	layout: page.layout
-			// };
+			return {
+				path: page.path,
+				data: page,
+				layout: page.layout
+			};
 		});
 	});
 }
