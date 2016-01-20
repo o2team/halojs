@@ -282,14 +282,15 @@ module.exports = {
 };
 
 },{"./google_code_prettify":5,"./jquery":6,"./util":7}],4:[function(require,module,exports){
-var $ = require('./jquery'),
-	util = require('./util');
+var $ = require('./jquery');
 module.exports = (function () {
 	var _bind,
+		_date,
 		$mlist,
 		$dl,
 		$btns;
 
+	_date = new Date();
 	$mlist = $('#j_dlist');
 	$dl = $('#j_dl');
 	$btns = $('#j_dtxt');
@@ -340,8 +341,13 @@ module.exports = (function () {
 					download_name: 'halojs.js',
 					isCompress: 0,
 					isDownload: 1,
-					encoding: 'utf8'
-					// version: util.randomStr(16)
+					encoding: 'utf8',
+					version: [
+						_date.getFullYear(),
+						_date.getMonth(),
+						_date.getDate(),
+						_date.getHours()
+					].join('')
 				},
 				success: function (data) {
 					window.open(data.url, '_blank');
@@ -375,7 +381,7 @@ module.exports = (function () {
 	}
 })()
 
-},{"./jquery":6,"./util":7}],5:[function(require,module,exports){
+},{"./jquery":6}],5:[function(require,module,exports){
 ! function () {
 	var q = null;
 	window.PR_SHOULD_USE_CONTINUATION = !0;
