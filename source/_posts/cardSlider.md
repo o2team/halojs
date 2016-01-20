@@ -21,6 +21,7 @@ deps:
 $("#wrap").cardSlider(
 	{
         direction:'Y',
+        cover: 0,//首屏索引
         scale:true,
         offset:50,
         duration:300,
@@ -40,7 +41,7 @@ $("#wrap").cardSlider(
 $("#wrap").cardSlider(
 	{
         direction:'Y',
-        first: 0,//首屏索引
+        cover: 0,//首屏索引
         scale:true,
         offset:50,
         duration:300,
@@ -63,7 +64,7 @@ $("#wrap").cardSlider(
 | name | 类型 | 必选 | 描述 |
 | :----: | :----: | :----: | :---- |
 | direction | string | optional | 翻页的方向，默认值为Y。可选值：X,Y|
-| first | int | optional | 首屏的页面索引。默认为：0 |
+| cover | int | optional | 首屏的页面索引。默认为：0 |
 | scale | boolean | optional | 缩放翻页，默认为true |
 | offset | int | optional | 翻页所需的手指位移最少偏移量。默认 50，单位px |
 | duration | int | optional | 翻页动画持续时长。默认 300，默认毫秒 |
