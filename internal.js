@@ -24,12 +24,22 @@ hexo = new Hexo(process.cwd(), {
 hexo.init().then(function () {
 	console.log('environment: internal');
 	hexo.extend.console.register('deploy', 'deploy your website', {
-		
+
 	}, function (args) {
-		deployer.deploy(hexo);
+		hexo.call(argv._[0], {
+			_: 'g'
+		}).then(function () {
+			deployer.deploy(hexo);
+		}).catch(function () {
+			hexo.call('help', {
+				_: 'h'
+			});
+		});
 	});
 	hexo.call(argv._[0], argv)
 		.catch(function () {
-			hexo.call('help', argv);
+			hexo.call('help', {
+				_: 'h'
+			});
 		});
 });

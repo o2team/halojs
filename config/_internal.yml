@@ -11,16 +11,13 @@ default_layout: post
 external_link: true
 highlight: false
 public_dir: internal
-deploy_dir: deploy_internal
+deploy_dir: .deploy_internal
 skip_render:
     - demo/**
     - src/**
 
 theme: hexo-theme-doc
 
-#deploy:
-#    - type: git
-#      repo: git@github.com:Littly/littletest.git
 
 environment: internal
 repo: git@github.com:Littly/internal.git

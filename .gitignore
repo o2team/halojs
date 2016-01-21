@@ -1,7 +1,8 @@
 .DS_Store
-.deploy_git/
 node_modules/
 db.json
 public/
 external/
 internal/
+.deploy_internal/
+.deploy_external/

@@ -10,7 +10,6 @@
     "express": "^4.13.3",
     "hexo": "^3.1.0",
     "hexo-deployer-ftpsync": "^0.1.1",
-    "hexo-deployer-git": "0.0.4",
     "hexo-generator-index": "^0.1.2",
     "hexo-renderer-ejs": "^0.1.0",
     "hexo-renderer-marked": "^0.2.4",
