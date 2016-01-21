@@ -2,8 +2,8 @@
 title: Hexo
 author: o2team
 
-url: http://littly.github.io/littletest
-root: /littletest/
+url: http://littly.github.io/internal
+root: /internal/
 permalink: api/:title.html
 
 new_post_name: :title.md
@@ -23,4 +23,4 @@ theme: hexo-theme-doc
 #      repo: git@github.com:Littly/littletest.git
 
 environment: internal
-repo: git@github.com:Littly/littletest.git
+repo: git@github.com:Littly/internal.git
