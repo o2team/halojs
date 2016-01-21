@@ -2,8 +2,8 @@
 title: Hexo
 author: o2team
 
-url: http://aotu.io/halojs/internal
-root: /halojs/internal/
+url: http://littly.github.io/internal
+root: /internal/
 permalink: api/:title.html
 
 new_post_name: :title.md
@@ -11,15 +11,13 @@ default_layout: post
 external_link: true
 highlight: false
 public_dir: internal
+deploy_dir: .deploy_internal
 skip_render:
     - demo/**
     - src/**
 
-
 theme: hexo-theme-doc
 
-deploy:
-    - type: git
-      repo: https://github.com/o2team/halojs.git
 
 environment: internal
+repo: git@github.com:Littly/internal.git

@@ -75,7 +75,7 @@ h6 {
 	margin: 0;
 }
 
-section,
+header section,
 nav,
 header,
 footer,
@@ -103,7 +103,7 @@ h6 {
 	font-family: inherit;
 }
 
-ul{
+ul {
 	list-style: none;
 }
 
@@ -158,8 +158,26 @@ ul{
 }
 
 .header_logo a {
+	position: relative;
+	display: block;
 	color: #fff;
-	text-align: center;
+	text-align: right;
+	width: 72px;
+	height: 60px;
+}
+
+.header_logo a:after {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.header_logo img {
+	display: inline-block;
+	height: 60%;
+	vertical-align: middle;
 }
 
 .header nav {
@@ -313,8 +331,8 @@ ul{
 	transition: color linear .1s;
 }
 
-.api_list_item:hover a {
-	color: #444;
+.api_list_item:hover a{
+	background: #f9f9f9;
 }
 
 .api_list_item.current a {
@@ -326,15 +344,14 @@ ul{
 	display: none;
 }
 
-.api_list_search a i {
+.api_list_search i {
 	font-style: normal;
-	/*color: rgb(133, 145, 228);*/
-	color: rgb(222, 100, 100);
+	color: rgb(255, 52, 52);
 }
 
-.api_list_search_complete a i {
-	-webkit-transition: color linear 1.5s;
-	transition: color linear 1.5s;
+.api_list_search_complete i {
+	-webkit-transition: color linear 2s;
+	transition: color linear 2s;
 	color: #888;
 }
 
@@ -796,8 +813,12 @@ ul{
 }
 
 .panel_hd a {
-	padding: 0 10px;
-	line-height: 30px;
+	display: inline-block;
+	width: 96px;
+	height: 48px;
+	background: url('../img/logo.png') no-repeat center;
+	background-size: auto 100%;
+	text-indent: -1000px;
 }
 
 .panel_hd span {
@@ -846,7 +867,7 @@ ul{
 .panel_list {
 	position: absolute;
 	left: 0;
-	top: 70px;
+	top: 90px;
 	bottom: 0;
 	right: 0;
 	padding: 10px 20px;
@@ -980,7 +1001,6 @@ ul{
 	background: #6691E4;
 	color: #fff;
 }
-
 
 .dtxt_sr:hover {
 	background: #B92D2D;

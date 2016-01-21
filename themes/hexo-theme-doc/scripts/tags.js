@@ -35,11 +35,11 @@ hexo.extend.tag.register(
 hexo.extend.tag.register(
 	'demo',
 	function (args) {
-		// {% demo /haloDoc/demo/cardSlider.html title%}
+		// {% demo root + demo/cardSlider.html title%}
 		return [
 			'<div class="post_content_demo fix">',
 				'<a href="',
-				url.resolve(hexo.config.url, path.join('/haloDoc', args[0])),
+				url.resolve(hexo.config.url, path.join(hexo.config.root, args[0])),
 				'" target="_blank" >',
 				args[1],
 				'</a>',
