@@ -98,22 +98,3 @@ hexo.theme.process().then(function () {
 		inStream.pipe(writeStream);
 	});
 });
-
-if (hexo.config.environment === 'external') {
-	hexo.extend.generator.register('gen1', function (locals) {
-		return locals.posts.filter(function (post) {
-			return post.group == '业务模块'
-		}).map(function (post) {});
-	});
-	hexo.extend.generator.register('gen2', function (locals) {
-		return locals.pages.filter(function (page) {
-			return page.path.startsWith('src/bussiness');
-		}).map(function (page) {
-			return {
-				path: page.path,
-				data: page,
-				layout: page.layout
-			};
-		});
-	});
-}
