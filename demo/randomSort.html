@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>HO2 - randomSort - demo</title>
+    <style>
+    html,body{width:100%; height:100%; overflow:hidden; margin: 0; padding: 0;}
+    textarea{display: block; width: 300px; height: 100px; border: 1px solid #300; margin: 20px auto;}
+    .input{display: block; width: 200px; height: 25px; line-height: 25px; margin: 10px auto; padding: 0;}
+    .btn{margin: 10px auto; padding: 0; display: block; width: 140px; height: 24px;line-height: 24px; background-color: #f00; color: #fff; border: 0 none; border-radius: 12px;}
+    </style>
+
+</head>
+<body ontouchstart>
+<input type="text" class="input" id="source" value="1,2,3,4,5,6,7" />
+<input type="text" class="input" id="target" disabled="disabled" />
+<input type="button" class="btn" id="btn" value="randomSort" />
+<script type="text/javascript" src="http://wq.360buyimg.com/js/ho2/zepto.js"></script>
+<script src="http://wq.360buyimg.com/js/ho2/ho2.js?v=2"></script>
+<script src="http://wq.360buyimg.com/js/ho2/dev/randomSort.js?v=2"></script>
+<script type="text/javascript">
+$("#btn").click(function(){
+    $("#target").val($.randomSort($("#source").val().split(",")).join(","));
+});
+</script>
+</body>
+</html>
