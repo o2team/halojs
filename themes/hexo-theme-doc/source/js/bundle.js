@@ -350,7 +350,7 @@ module.exports = (function () {
 					].join('')
 				},
 				success: function (data) {
-					window.open(data.url, '_blank');
+					window.open(data.url, '_self');
 				}
 			});
 		});
