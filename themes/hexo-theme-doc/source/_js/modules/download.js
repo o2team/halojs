@@ -16,8 +16,7 @@ module.exports = (function () {
 			var $w = $(evt.target).closest('.j_dlist_item');
 			if ($w.hasClass('j_dlist_item_on')) {
 				$w.removeClass('j_dlist_item_on');
-			}
-			else {
+			} else {
 				$w.addClass('j_dlist_item_on');
 			}
 		});
@@ -49,7 +48,7 @@ module.exports = (function () {
 			$.ajax({
 				url: 'http://aotu.jd.com/common/api/rcombo',
 				type: 'POST',
-				async: false,
+				//				async: false,
 				data: {
 					root: 'http://wq.360buyimg.com/js/ho2/min/',
 					files: JSON.stringify(url),
@@ -65,7 +64,7 @@ module.exports = (function () {
 					].join('')
 				},
 				success: function (data) {
-					window.open(data.url, '_blank');
+					location.href = data.url;
 				}
 			});
 		});
@@ -79,14 +78,15 @@ module.exports = (function () {
 				$('.j_dlist_item', $mlist).each(function (idx, el) {
 					if ($(el).hasClass('j_dlist_item_on')) {
 						$(el).removeClass('j_dlist_item_on');
-					}
-					else {
+					} else {
 						$(el).addClass('j_dlist_item_on');
 					}
 				})
 				return;
 			}
-		})
+		});
+		
+		
 	}
 	var init = function () {
 		_bind();

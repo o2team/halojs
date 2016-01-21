@@ -6,3 +6,4 @@ external/
 internal/
 .deploy_internal/
 .deploy_external/
+.deploy_git/

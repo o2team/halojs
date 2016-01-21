@@ -716,19 +716,21 @@ ul {
 	background: inherit;
 }
 
-.post_content_demo {
+.post_content_demo,
+.post_content_download{
 	padding: 12px;
 	background: #f4f4f4;
+	height: 35px;
 }
 
 .post_content_demo a,
+.post_content_download a,
 .post_content_dbtn {
 	float: left;
 	height: 35px;
 	padding: 0 12px;
 	line-height: 35px;
 	box-sizing: border-box;
-	;
 	border: solid 1px #ccc;
 	border-radius: 5px;
 	text-align: center;
@@ -736,7 +738,8 @@ ul {
 }
 
 .post_content_demo a:hover,
-.post_content_dbtn:hover {
+.post_content_download a:hover,
+.post_content_dbtn:hover{
 	text-decoration: none;
 	background: #eee;
 }

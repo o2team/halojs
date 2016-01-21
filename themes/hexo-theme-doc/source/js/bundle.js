@@ -22,6 +22,7 @@ var Util = require('./util'),
 var Search,
 	Template,
 	Demo,
+	Download,
 	Panel,
 	init;
 
@@ -179,9 +180,9 @@ Demo = (function () {
 				text: _text,
 				width: 128,
 				height: 128,
-				colorDark : "#000000",
-				colorLight : "#ffffff",
-				correctLevel : QRCode.CorrectLevel.H
+				colorDark: "#000000",
+				colorLight: "#ffffff",
+				correctLevel: QRCode.CorrectLevel.H
 			});
 			$(target).data('showed', true);
 		}
@@ -201,8 +202,7 @@ Demo = (function () {
 					if ('QRCode' in window) {
 						showCode($('div', evt.target)[0], $(evt.target).data('url'));
 					}
-				}
-				else {
+				} else {
 					showCode($('div', evt.target)[0], $(evt.target).data('url'));
 				}
 			}
@@ -212,6 +212,51 @@ Demo = (function () {
 				hideCode($('div', evt.target)[0]);
 			}
 		});
+	};
+	return {
+		init: init
+	}
+})();
+
+Download = (function () {
+	var init,
+		_bind,
+		_$btn,
+		_date,
+		files;
+	_date = new Date();
+	_bind = function () {
+		_$btn.on('click', function (evt) {
+			$.ajax({
+				url: 'http://aotu.jd.com/common/api/rcombo',
+				type: 'POST',
+				data: {
+					root: 'http://wq.360buyimg.com/js/ho2/min/',
+					files: JSON.stringify(files),
+					download_name: hexo.title + '.js',
+					isCompress: 0,
+					isDownload: 1,
+					encoding: 'utf8',
+					version: [
+						_date.getFullYear(),
+						_date.getMonth(),
+						_date.getDate(),
+						_date.getHours()
+					].join('')
+				},
+				success: function (data) {
+					location.href = data.url;
+				}
+			})
+		});
+	};
+	init = function () {
+		_$btn = $('#j_post_content_download');
+		files = [];
+		$.each((_$btn.data('files') || []).split(' '), function (idx, val) {
+			files.push(val + '.js');
+		});
+		_bind();
 	};
 	return {
 		init: init
@@ -233,8 +278,7 @@ Panel = (function () {
 		_$menu.on('click', function () {
 			if (_$body.hasClass('open_panel')) {
 				_$body.removeClass('open_panel');
-			}
-			else {
+			} else {
 				_$body.addClass('open_panel');
 			}
 		});
@@ -247,9 +291,11 @@ Panel = (function () {
 		init: init
 	}
 })();
+
 init = function () {
 	CodePrettify.init();
 	Demo.init();
+//	Download.init();
 	Search.init();
 	Panel.init();
 };
@@ -257,7 +303,6 @@ init = function () {
 module.exports = {
 	init: init
 };
-
 },{"./code_prettify":3,"./jquery":6,"./util":7}],3:[function(require,module,exports){
 /*代码高亮*/
 var Util = require('./util'),
@@ -300,8 +345,7 @@ module.exports = (function () {
 			var $w = $(evt.target).closest('.j_dlist_item');
 			if ($w.hasClass('j_dlist_item_on')) {
 				$w.removeClass('j_dlist_item_on');
-			}
-			else {
+			} else {
 				$w.addClass('j_dlist_item_on');
 			}
 		});
@@ -333,7 +377,7 @@ module.exports = (function () {
 			$.ajax({
 				url: 'http://aotu.jd.com/common/api/rcombo',
 				type: 'POST',
-				async: false,
+				//				async: false,
 				data: {
 					root: 'http://wq.360buyimg.com/js/ho2/min/',
 					files: JSON.stringify(url),
@@ -349,7 +393,7 @@ module.exports = (function () {
 					].join('')
 				},
 				success: function (data) {
-					window.open(data.url, '_self');
+					location.href = data.url;
 				}
 			});
 		});
@@ -363,14 +407,15 @@ module.exports = (function () {
 				$('.j_dlist_item', $mlist).each(function (idx, el) {
 					if ($(el).hasClass('j_dlist_item_on')) {
 						$(el).removeClass('j_dlist_item_on');
-					}
-					else {
+					} else {
 						$(el).addClass('j_dlist_item_on');
 					}
 				})
 				return;
 			}
-		})
+		});
+		
+		
 	}
 	var init = function () {
 		_bind();
@@ -379,7 +424,6 @@ module.exports = (function () {
 		init: init
 	}
 })()
-
 },{"./jquery":6}],5:[function(require,module,exports){
 ! function () {
 	var q = null;

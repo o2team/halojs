@@ -87,6 +87,8 @@ $("#wrap").cardSlider(
 
 {% demo demo/cardSlider.html 点击查看cardSlider %}
 
+## 模块下载
+{% download 直接下载cardSlider %}
 <!--## 模块下载
 
 [直接下载cardSlider](#)

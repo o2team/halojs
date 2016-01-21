@@ -32,10 +32,10 @@ hexo.extend.tag.register(
 );
 
 
+// {% demo root + demo/cardSlider.html title%}
 hexo.extend.tag.register(
 	'demo',
 	function (args) {
-		// {% demo root + demo/cardSlider.html title%}
 		return [
 			'<div class="post_content_demo fix">',
 				'<a href="',
@@ -52,3 +52,14 @@ hexo.extend.tag.register(
 		].join('');
 	}
 );
+
+
+
+// {% url btnname %}
+hexo.extend.tag.register(
+	'download',
+	function (args) {
+		var deps = this.deps || [];
+		return '<div class="post_content_download"><a id="j_post_content_download" href="javascript:;" data-files="uncmd ' + deps.join(' ') + ' ' + this.title + '">' + args[0] + '</a></div>';
+	}
+)
