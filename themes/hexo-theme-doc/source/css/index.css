@@ -331,7 +331,7 @@ ul {
 	transition: color linear .1s;
 }
 
-.api_list_item:hover a{
+.api_list_item:hover a {
 	background: #f9f9f9;
 }
 
@@ -985,16 +985,22 @@ ul {
 	font-size: 14px;
 	font-weight: 900;
 	margin: 30px auto 10px;
-	height: 28px;
-	line-height: 28px;
-	background: #e4e4e4;
+	height: 30px;
+	line-height: 30px;
+	background: #dfdfdf;
 }
 
 .dtxt_sa,
 .dtxt_sr {
-	padding: 6px;
+	float: right;
+	text-indent: 0;
+	padding: 0 12px;
+	color: #fff;
+	line-height: inherit;
 	-webkit-transition: all linear .1s;
 	transition: all linear .1s;
+	background: #bbb;
+	margin-left: 1px;
 }
 
 .dtxt_sa:hover {

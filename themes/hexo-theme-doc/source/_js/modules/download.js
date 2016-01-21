@@ -13,13 +13,12 @@ module.exports = (function () {
 
 	_bind = function () {
 		$mlist.on('click', function (evt) {
-			var $target = $(evt.target),
-				deps = $target.closest('.j_dlist_item').data('deps');
-			if ($target.is('.j_dlist_toggleon')) {
-				$target.closest('.j_dlist_item').addClass('j_dlist_item_on');
+			var $w = $(evt.target).closest('.j_dlist_item');
+			if ($w.hasClass('j_dlist_item_on')) {
+				$w.removeClass('j_dlist_item_on');
 			}
-			if ($target.is('.j_dlist_toggleoff')) {
-				$target.closest('.j_dlist_item').removeClass('j_dlist_item_on');
+			else {
+				$w.addClass('j_dlist_item_on');
 			}
 		});
 
