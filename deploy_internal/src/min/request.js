@@ -1,1 +1,0 @@
-define("request",function(a,b,c){"use zeptojs";var d=function(){var c,d,e,a=location.search,b={};if(a){c=a.replace(/^\?/,""),d=c.split("&");for(i in d)e=d[i].split("="),b[e[0]]=e[1]||""}return function(a){return"string"==typeof a?b[a]:b}}();c.exports=d});

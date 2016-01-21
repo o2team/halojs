@@ -27,7 +27,7 @@ hexo.init().then(function () {
 
 	}, function (args) {
 		if (args.g) {
-			hexo.call(argv._[0], {
+			hexo.call('generate', {
 				_: 'g'
 			}).then(function () {
 				deployer.deploy(hexo);
@@ -35,7 +35,6 @@ hexo.init().then(function () {
 		} else {
 			deployer.deploy(hexo);
 		}
-
 	});
 	hexo.call(argv._[0], argv)
 		.catch(function () {

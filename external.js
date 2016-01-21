@@ -26,7 +26,15 @@ hexo.init().then(function () {
 	hexo.extend.console.register('deploy', 'deploy your website', {
 
 	}, function (args) {
-		deployer.deploy(hexo);
+		if (args.g) {
+			hexo.call('generate', {
+				_: 'g'
+			}).then(function () {
+				deployer.deploy(hexo);
+			});
+		} else {
+			deployer.deploy(hexo);
+		}
 	});
 	hexo.call(argv._[0], argv)
 		.catch(function () {
