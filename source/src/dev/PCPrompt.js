@@ -18,7 +18,6 @@
     );
 */
 define("PCPrompt",function(require,exports,module){
-    'use zeptojs';
     var _arg={
         //默认的参数
         title: "温馨提示",
@@ -65,4 +64,5 @@ define("PCPrompt",function(require,exports,module){
             document.body.appendChild(mask);
         }
     }
+    window.$&&($.PCPrompt=module.exports);
 });

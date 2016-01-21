@@ -15,8 +15,7 @@
     );
 */
 define("launcthApp",function(require,exports,module){
-    'use zeptojs';
-    return _open=function(){
+    var _open=function(){
         var isSQ=-1,
         isAndroid=navigator.userAgent.indexOf('Android')>-1,
         download=function(arg){//下载操作
@@ -129,4 +128,6 @@ define("launcthApp",function(require,exports,module){
         }
         return openapp;
     }();
+    window.$&&($.launchApp=_open);
+    return _open;
 });

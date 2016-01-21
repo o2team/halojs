@@ -7,7 +7,6 @@
     @ 惰人用法： $.compare(obj,obj2);
 */
 define("compare",function(require,exports,module){
-	'use zeptojs';
 	//compare,compareArr,compareObj三个比较函数各自负责简单对比，组合起来就是可以比较任意复杂对象
 	var compare=function(obj1,obj2){
 		var type1=getType(obj1),type2=getType(obj2);
@@ -66,5 +65,6 @@ define("compare",function(require,exports,module){
 		}
 	};
 	module.exports=_compare;
+	window.$&&($.compare=_compare);
 });
 

@@ -7,7 +7,7 @@
     $.subscribeActive(
         {
             activeId: '173',//可以同时预约多个活动，不过上限是20个。多个活动预约的方式：activeId: "xxx,xxx,xxx"
-            cb:function(json){
+            callback:function(json){
                 //"retCode":"", 返回码，正常返回为空，13为未登录，10001参数错误，其他为系统错误
                 //"replyCode":"0", 0预约成功 10006重复预约，10007不是预约活动，10008预约已结束，10009预约还未开始
             }
@@ -56,7 +56,7 @@
                                 }
                             }
                         }
-                        typeof(arg.cb)=='function'&&arg.cb(json);
+                        typeof(arg.callback)=='function'&&arg.callback(json);
                     },
                     timeout:100000
                 },'utf-8'

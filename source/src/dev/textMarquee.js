@@ -15,7 +15,6 @@
     );
 */
 define("textMarquee",function(require,exports,module){
-    'use zeptojs';
     var webkit=require("prefix"),
         styleSheet=require("stylesheet"),
         isDom=require("isDom"),
@@ -75,6 +74,7 @@ define("textMarquee",function(require,exports,module){
             marquee.innerHTML=marquee.innerHTML+space;
             marquee.className=make_marquee_class(duration);
         };
+    window.$&&($.textMarquee=make_marquee);
     return make_marquee;
 });
 

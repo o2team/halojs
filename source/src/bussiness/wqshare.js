@@ -1,7 +1,7 @@
 /*
     @ author leeenx
     @ version 1.0.0
-    @ data: 2016-01-03
+    @ date: 2016-01-03
     @ 微信手Q分享接口
     @ 兼容手Q微信原来的方法，使用window.shareConfig对象来配置对象
     window.shareConfig = {

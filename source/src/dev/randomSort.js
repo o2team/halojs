@@ -9,8 +9,7 @@
 */
 
 define("randomSort",function(require,exports,module){
-	'use zeptojs';
-	return function(arr){
+	var _randomSort=function(arr){
 		//将队列随机打乱
 		var arrLen=arr.length;
 		if(arrLen<=0)return arr;
@@ -26,4 +25,6 @@ define("randomSort",function(require,exports,module){
 		}
 		return new_arr;//生成新数组
 	}
+	window.$&&($.randomSort=_randomSort);
+	return _randomSort;
 });

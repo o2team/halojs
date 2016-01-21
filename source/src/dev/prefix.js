@@ -6,8 +6,7 @@
 	@ 直接require('prefix');即可获取
 */
 define("prefix",function(require,exports,module){
-	'use zeptojs';
-	return function(){
+	var _prefix=function(){
 		//浏览器特有css样式的
 		var css3_div=document.createElement("div");
 		css3_div.style.cssText='-webkit-transition:all .1s; -moz-transition:all .1s; -o-transition:all .1s; -ms-transition:all .1s; transition:all .1s;';
@@ -23,4 +22,6 @@ define("prefix",function(require,exports,module){
 			return '';
 		}
 	}();
+	window.$&&($.prefix=_prefix);
+	return _prefix;
 });

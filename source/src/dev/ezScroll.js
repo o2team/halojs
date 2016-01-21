@@ -21,7 +21,6 @@
 */
 
 define("ezScroll",function(require,exports,module){
-    'use zeptojs';
     module.exports=function(){
         console.log("todo");
     };

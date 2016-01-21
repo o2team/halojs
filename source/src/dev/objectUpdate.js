@@ -15,7 +15,6 @@
     $.objectUpdate(obj1,obj2[,incremental]);
 */
 define("objectUpdate",function(require,exports,module){
-	'use zeptojs';
 	var getType=function(obj){
 		return Object.prototype.toString.call(obj);
 	},
@@ -93,4 +92,5 @@ define("objectUpdate",function(require,exports,module){
 		}
 		"[object Object]"==type1?copyObj(arg.obj1,arg.obj2,arg.incremental):copyArr(arg.obj1,arg.obj2,arg.incremental);
 	};
+	window.$&&($.objectUpdate=module.exports);
 });

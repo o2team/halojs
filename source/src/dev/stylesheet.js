@@ -48,6 +48,6 @@ define("stylesheet",function(require,exports,module){
 		throw("stylesheet: arguments parseerror!");
 	};
 	
-	$&&($.stylesheet=mix);
+	window.$&&($.stylesheet=mix);
 	module.exports={add:add,remove:remove};
 });

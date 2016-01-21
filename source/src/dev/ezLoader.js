@@ -13,9 +13,8 @@
     @ 后续方向，支持fn扩展与支持指定容器的ezLoader
 */
 define("ezLoader",function(require,exports,module){
-    'use zeptojs';
 	var prefix=require("prefix");
-	return function(fadein,preload_distance,zoom){
+	var _ezLoader=function(fadein,preload_distance,zoom){
         zoom=zoom||1;
         fadein=typeof(fadein)=='undefined'?1:fadein;
         var getTop = function(e) {
@@ -66,4 +65,6 @@ define("ezLoader",function(require,exports,module){
         var o={};
         return o;
     }
+    window.$&&($.ezLoader=_ezLoader);
+    return _ezLoader;
 });

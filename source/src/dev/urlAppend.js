@@ -8,7 +8,6 @@
 */
 
 define("urlAppend",function(require,exports,module){
-	'use zeptojs';
 	var _urlAppend=function(arg,hasPara){//添加单个参数
 		var k=arg.k,v=arg.v,reg=/^[a-z0-9\_\-\%\.\!\|]+$/i;
 		if(!k||!v||!reg.test(k)||!reg.test(v))return '';//没有键名和键值
@@ -34,4 +33,5 @@ define("urlAppend",function(require,exports,module){
 		res=url+res+hash;
 	    return res;
 	};
+	window.$&&($.urlAppend=_urlAppend);
 });

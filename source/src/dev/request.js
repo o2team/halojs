@@ -29,4 +29,5 @@ define("request",function(require,exports,module){
 		};
 	}();
 	module.exports=_request;
+	window.$&&($.request=_request);
 });

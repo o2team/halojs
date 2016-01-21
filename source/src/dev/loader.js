@@ -17,8 +17,7 @@
     );
 */
 define("loader",function(require,exports,module){
-    'use zeptojs';
-    return function(arg){
+    var _loader=function(arg){
         if(typeof(arg)=="undefined")return ;
         var source=arg.source||[],onchange=arg.onchange||function(){},complete=arg.complete||function(){},total=source.length,loaded=0,percent=0;
         for(var i=0;i<total;++i){
@@ -35,7 +34,9 @@ define("loader",function(require,exports,module){
                 img.src=source[i];
             }(i);
         }
-    }
+    };
+    window.$&&($.loader=_loader);
+    return _loader;
 });
 
 

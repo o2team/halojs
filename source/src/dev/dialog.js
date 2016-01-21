@@ -96,7 +96,6 @@
     );
 */
 define("dialog",function(require,exports,module){
-    'use zeptojs';
     var _arg={//默认配置
         type: 'messagebox',
         text: '',
@@ -198,7 +197,7 @@ define("dialog",function(require,exports,module){
     };
     resize();
     window.addEventListener("resize",resize);
-    return function(arg){
+    var _dialog=function(arg){
         prevent();//禁止滚动
         for(var i in _arg){//查漏补缺
             arg[i]||(arg[i]=_arg[i]);
@@ -268,4 +267,6 @@ define("dialog",function(require,exports,module){
         box.appendChild(closeBtn);
         document.body.appendChild(mask);
     };
+    $.dialog=_dialog;
+    return _dialog;
 });

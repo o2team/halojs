@@ -5,7 +5,6 @@
     @ 作用: jsonp方法
 */
 define("jsonp",function(require,exports,module){
-    "use zeptojs"
 	var _jsonp=function(arg){
         if("[object Object]"!=Object.prototype.toString.call(arg)){
             throw("jsonp: arguments parseerror!");
@@ -55,4 +54,5 @@ define("jsonp",function(require,exports,module){
         return o;
     },jr=0;
     module.exports=_jsonp;
+    window.$&&($.jsonp=_jsonp);
 });

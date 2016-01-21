@@ -17,7 +17,6 @@
     );
 */
 define("imgPlayer",function(require,exports,module){
-    'use zeptojs';
     var webkit=require("prefix"),klass=require("klass"),addClass=klass.addClass,removeClass=klass.removeClass,stylesheet=require("stylesheet"),css=require("css"),isDom=require("isDom");
     //添加滚动效果
     stylesheet.add('.halo_page_drag_keep{'+webkit+'transition:'+webkit+'transform .2s linear;}');//竖屏
@@ -277,4 +276,5 @@ define("imgPlayer",function(require,exports,module){
         return o;
     }
     module.exports=_imgplayer;
+    window.$&&($.fn.imgPlayer=_imgplayer);
 });

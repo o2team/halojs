@@ -6,7 +6,6 @@
 	@ 用法如下：
 */
 define("getTransfromValue",function(require,exports,module){
-	'use zeptojs';
 	var _get=function(){
 		var transform=arguments[0],key=arguments[1],index=arguments[2],prefix=require(prefix),css=require("css");
 		if(typeof(transform)!="string" && typeof(transform)=="object"){

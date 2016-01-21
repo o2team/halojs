@@ -1,1 +1,1 @@
-define("isDom",function(){"use zeptojs";var d="object"==typeof HTMLElement?function(a){return a instanceof HTMLElement}:function(a){return a&&"object"==typeof a&&1===a.nodeType&&"string"==typeof a.nodeName};return d});
+define("isDom",function(){var d="object"==typeof HTMLElement?function(a){return a instanceof HTMLElement}:function(a){return a&&"object"==typeof a&&1===a.nodeType&&"string"==typeof a.nodeName};return window.$&&($.isDom=d),d});

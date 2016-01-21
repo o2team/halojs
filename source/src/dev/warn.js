@@ -13,7 +13,6 @@
     );
 */
 define("warn",function(require,exports,module){
-	'use zeptojs';
 	var webkit=require("prefix"),styleSheet=require("stylesheet");
 	var warn=function(args){
 		var _warn=document.createElement("div"),_warn_icon=document.createElement('i'),_warn_wrp=document.createElement('div');
@@ -65,5 +64,6 @@ define("warn",function(require,exports,module){
 			}
 		}
 	},false);
+	window.$&&($.warn=warn.set);
 	return warn.set;
 });

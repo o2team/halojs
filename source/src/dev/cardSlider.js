@@ -8,6 +8,7 @@
         {
             container: "#wrap",
             direction:'Y',
+            cover: 0,//封面索引
             scale:true,
             offset:50,
             duration:300,
@@ -23,6 +24,7 @@
     $("#wrap").cardSlider(
 		{
             direction:'Y',
+            cover: 0,//封面索引
             scale:true,
             offset:50,
             duration:300,
@@ -37,7 +39,6 @@
 */
 
 define("cardSlider",function(require,exports,module){
-    'use zeptojs';
 	var webkit=require("prefix"),isDom=require("isDom");
     var _cardSlider=function(arg){
         /*
@@ -85,10 +86,10 @@ define("cardSlider",function(require,exports,module){
         }();
         if(!page.length)return ;//没有分页存在
         var totalPage=page.length;
-        arg.first=arg.first||0;//翻页初始化第一页
-        if(arg.first>=totalPage)arg.first=totalPage-1;//超过最后一页，就认为是最后一页
-        else if(arg.first<0)arg.first=0;//小于0，就认为是第一页
-        var cur=arg.first,next=cur+1,prev=cur-1;
+        arg.cover=arg.cover||0;//翻页初始化第一页
+        if(arg.cover>=totalPage)arg.cover=totalPage-1;//超过最后一页，就认为是最后一页
+        else if(arg.cover<0)arg.cover=0;//小于0，就认为是第一页
+        var cur=arg.cover,next=cur+1,prev=cur-1;
         if(arg.infinite){
             if(prev<0)prev=totalPage-1;
             if(next>totalPage-1)next=0;
@@ -299,8 +300,8 @@ define("cardSlider",function(require,exports,module){
             };
         };
         for(var i=0,len=page.length;i<len;++i){
-            /*arg.first初始化首页*/
-            page[i].style.cssText="position:absolute; left:0; top:0; width:100%; height:100%; "+(arg.first==i?" z-index:0;":webkit+"transform:"+translateL+ch+"px"+translateR+"; z-index:1;");
+            /*arg.cover初始化首页*/
+            page[i].style.cssText="position:absolute; left:0; top:0; width:100%; height:100%; "+(arg.cover==i?" z-index:0;":webkit+"transform:"+translateL+ch+"px"+translateR+"; z-index:1;");
         }
         bindEvent();//初始化绑定
         var x=0,y=0;
@@ -372,4 +373,5 @@ define("cardSlider",function(require,exports,module){
     		_cardSlider(arg);
     	}
     };
+    window.$&&($.cardSlider=$.fn.cardSlider=module.exports);
 });

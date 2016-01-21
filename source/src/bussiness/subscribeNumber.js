@@ -2,7 +2,7 @@
     @ author leeenx
     @ version 1.0.0
     @ data: 2015-12-14
-    @ 查询活动预约人数
+    @ 查看商品预约人数
     @ 用法如下：
     $.subscribeNumber(
         {

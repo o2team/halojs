@@ -6,7 +6,6 @@
     @ 用法：$.remember();
 */
 define("remember",function(require,exports,module){
-	'use zeptojs';
 	if(!window.localStorage){
 		return ;//不支持localStorage
 	}

@@ -27,6 +27,7 @@ define("mcoss",function(require,exports,module){
 			actid:'',
 			areaid:'',
 			pc :'10',
+			pcs: '0',
 			ptag : '1000.1.1',
 			options : 1 // 默认加上options=1 
 		},

@@ -8,6 +8,7 @@
         {
             container: "#wrap",
             direction:'Y',
+            cover: 0,//封面索引
             offset:50,
             duration:300,
             infinite:true,
@@ -22,6 +23,7 @@
     $("#wrap").cardSlider(
 		{
             direction:'Y',
+            cover: 0,//封面索引
             offset:50,
             duration:300,
             infinite:true,
@@ -35,7 +37,6 @@
 */
 
 define("parallaxSlider",function(require,exports,module){
-    'use zeptojs';
 	var prefix=require("prefix"),isDom=require("isDom"),stylesheet=require("stylesheet");
     var _parallaxslider=function(arg){
         /*
@@ -86,10 +87,10 @@ define("parallaxSlider",function(require,exports,module){
             if(_subpage)subpage[i]=[_subpage,parseFloat(_subpage.getAttribute("halo-slider-speed"))||1];
             else subpage[i]=undefined;
         }
-        arg.first=arg.first||0;//翻页初始化第一页
-        if(arg.first>=totalPage)arg.first=totalPage-1;//超过最后一页，就认为是最后一页
-        else if(arg.first<0)arg.first=0;//小于0，就认为是第一页
-        var cur=arg.first,next=cur+1,prev=cur-1;
+        arg.cover=arg.cover||0;//翻页初始化第一页
+        if(arg.cover>=totalPage)arg.cover=totalPage-1;//超过最后一页，就认为是最后一页
+        else if(arg.cover<0)arg.cover=0;//小于0，就认为是第一页
+        var cur=arg.cover,next=cur+1,prev=cur-1;
         if(arg.infinite){
             if(prev<0)prev=totalPage-1;
             if(next>totalPage-1)next=0;
@@ -290,8 +291,8 @@ define("parallaxSlider",function(require,exports,module){
             };
         };
         for(var i=0,len=page.length;i<len;++i){
-            /*arg.first初始化首页*/
-            page[i].style.cssText="position:absolute; left:0; top:0; width:100%; height:100%; overflow:hidden; "+(arg.first==i?"":prefix+"transform:"+translateL+ch+"px"+translateR);
+            /*arg.cover初始化首页*/
+            page[i].style.cssText="position:absolute; left:0; top:0; width:100%; height:100%; overflow:hidden; "+(arg.cover==i?"":prefix+"transform:"+translateL+ch+"px"+translateR);
         }
         bindEvent();//初始化绑定
         var x=0,y=0;
@@ -347,4 +348,5 @@ define("parallaxSlider",function(require,exports,module){
     		_parallaxslider(arg);
     	}
     };
+    window.$&&($.parallaxSlider=module.exports);
 });

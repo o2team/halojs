@@ -38,7 +38,6 @@
     $.cookie("key",null); -- 删除cookie
 */
 define("cookie",function(require,exports,module){
-    'use zeptojs';
     var setCookie=function(name,value,expires,domain,path,unit){
         if(!name){
             return ;//空值或空方法
@@ -100,7 +99,8 @@ define("cookie",function(require,exports,module){
         }
         return null;
     };
-    return function(key,value,arg){
+
+    var _cookie=function(key,value,arg){
         if("[object Object]"==Object.prototype.toString.call(key)){
             //表示所有的参数都以object形式传入
             switch (key.type){
@@ -120,4 +120,6 @@ define("cookie",function(require,exports,module){
             return setCookie(key,value,arg.expires,arg.domain,arg.path,arg.unit);
         }
     }
+    window.$&&($.cookie=_cookie);
+    return _cookie;
 });

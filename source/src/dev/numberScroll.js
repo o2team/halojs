@@ -7,7 +7,6 @@
     @ 需要优化成适合zepto.js调用的形式
 */
 define("numberScroll",function(require,exports,module){
-	'use zeptojs';
 	var _scoller=function(_config){
 		var webkit=require("prefix"),
 	    config={
@@ -110,9 +109,9 @@ define("numberScroll",function(require,exports,module){
 	            }else{
 	                isAlterNate&&(direction=(i%2==0?"up":"down"));
 	                if(l2r){//从左到右滚动
-	                    str+='<i style="display:inline-block; vertical-align:top; position:relative; width: '+perW+'px; height: '+h+'px; line-height: '+h+'px; text-align: center; overflow: hidden;">'+createNum(ni[i],_ni[i],Math.ceil(needScrollI++/groupNum),direction,h)+'</i>';
+	                    str+='<i style="display:inline-block; vertical-align:top; position:relative; width: '+perW+'px; height: '+h+'px; line-height: '+h+'px; text-align: center; overflow: hidden;">'+createNum(ni[i],_ni[i],Math.ceil((needScrollI++)/groupNum),direction,h)+'</i>';
 	                }else{//从右到左滚动
-	                    str+='<i style="display:inline-block; vertical-align:top; position:relative; width: '+perW+'px; height: '+h+'px; line-height: '+h+'px; text-align: center; overflow: hidden;">'+createNum(ni[i],_ni[i],Math.ceil(needScrollI--/groupNum),direction,h)+'</i>';
+	                    str+='<i style="display:inline-block; vertical-align:top; position:relative; width: '+perW+'px; height: '+h+'px; line-height: '+h+'px; text-align: center; overflow: hidden;">'+createNum(ni[i],_ni[i],Math.ceil((needScrollI--)/groupNum),direction,h)+'</i>';
 	                }
 	            }
 	        }
@@ -187,4 +186,5 @@ define("numberScroll",function(require,exports,module){
 	    return {scroll:scroll,set:set,show:show}
 	};
 	module.exports=_scoller;
+	window.$&&($.numberScroll=_scoller);
 });
