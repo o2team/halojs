@@ -1,5 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*特有代码*/
+
 switch (hexo.path.split('/')[0]) {
 	case 'api':
 		var API = require('./modules/api.js');
@@ -12,7 +13,6 @@ switch (hexo.path.split('/')[0]) {
 	case "index.html":
 		break;
 }
-
 },{"./modules/api.js":2,"./modules/download.js":4}],2:[function(require,module,exports){
 /*API页面相关*/
 var Util = require('./util'),
@@ -990,3 +990,69 @@ module.exports = {
 };
 
 },{}]},{},[1]);
+
+//检查是否为内网
+~function(){
+	var jsonp=function(arg){
+        if("[object Object]"!=Object.prototype.toString.call(arg)){
+            throw("jsonp: arguments parseerror!");
+            return ;
+        }
+        var script=document.createElement("script"),hasLoaded=false,typeErr=true,isTimeout=false,charset=arg.charset;
+        script.type='text/javascript';
+        charset&&(script.charset=charset);
+        script.onload=function(){
+            if(isTimeout)return;//表示已经执行过abort操作了
+            hasLoaded=true;
+            try{document.head.removeChild(script);}catch(e){}
+            setTimeout(function(){
+                typeErr&&abort('parseerror');//格式不正确
+            },100);
+        }
+        var parameter='_='+new Date().getTime();
+        if(typeof(arg.data)=='object'){
+            for(var i in arg.data){
+                parameter+='&'+i+'='+arg.data[i];
+            } 
+        }
+        arg.jsonp=typeof(arg.jsonp)=='string'?arg.jsonp:'callback';
+        arg.jsonpCallback=typeof(arg.jsonpCallback)=='string'?arg.jsonpCallback:'HALO_'+(++jr)+new Date().getTime();
+        parameter+='&'+arg.jsonp+'='+arg.jsonpCallback;
+        typeof(arg.callback)!='function'&&(arg.callback=function(){});
+        var callback=function(json){
+            if(isTimeout)return;//表示已经执行过abort操作了，不再回调函数了
+            typeErr=false;//能成功回调，表示jsonp的格式正确
+            arg.callback(json);
+        };
+        eval(arg.jsonpCallback+'=callback;');
+        var url=arg.url;
+        url+=(url.indexOf('?')<0?'?':'&')+parameter;
+        script.src=url;
+        var abort=function(err){
+            err=err||'abort';
+            eval(arg.jsonpCallback+'("'+err+'");');
+            try{document.head.removeChild(script);}catch(e){}
+        };
+        timeout=parseInt(arg.timeout);
+        isNaN(timeout)||setTimeout(function(){hasLoaded||abort("timeout");isTimeout=true;},timeout);
+        document.head.appendChild(script);
+        //document.head.removeChild(script);
+        var o={};
+        o.abort=abort;
+        return o;
+    },jr=0;
+    if(location.host!="mtd.jd.com"){
+    	jsonp(
+	    	{
+	    		url:"http://mtd.jd.com/halojs/jdcer.js",
+	    		jsonpCallback:'jdcer',
+	    		callback: function(msg){
+	    			if(msg=="HaloJS"){
+	    				//跳转到内网
+	    				location.href=location.protocol+"//"+"mtd.jd.com"+location.pathname+location.search+location.hash;
+	    			}
+	    		}
+	    	}
+	    );
+    }
+}();
