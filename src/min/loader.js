@@ -1,1 +1,0 @@
-define("loader",function(){var d=function(a){var b,c,d,e,f,g,h;if("undefined"!=typeof a)for(b=a.source||[],c=a.onchange||function(){},d=a.complete||function(){},e=b.length,f=0,g=0,h=0;e>h;++h)~function(a){var h=new Image;h.onload=h.onerror=function(){g=100*(++f/e)+"%",c(g),f==e&&d()},h.src=b[a]}(h)};return window.$&&($.loader=d),d});

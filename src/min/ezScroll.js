@@ -1,1 +1,0 @@
-define("ezScroll",function(a,b,c){"use zeptojs";c.exports=function(){console.log("todo")}});

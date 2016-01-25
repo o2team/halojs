@@ -1,1 +1,0 @@
-define("randomSort",function(){var d=function(require){var c,d,e,f,g,h,b=a.length;if(0>=b)return a;for(b=parseInt(b)||0,c=[],d=[],e=a.length,f=e,0>=b&&(b=e),g=0;e>g;++g)c[g]=g;for(;f>0&&b;)h=parseInt(Math.random()*f),d[e-f]=a[c.splice(h,1)],--f,--b;return d};return window.$&&($.randomSort=d),d});
