@@ -24,6 +24,7 @@
 <script src="http://wq.360buyimg.com/js/ho2/ho2.js?v=2"></script>
 <script src="http://wq.360buyimg.com/js/ho2/dev/randomSort.js?v=2"></script>
 <script type="text/javascript">
+require("randomSort");
 $("#btn").click(function(){
     $("#target").val($.randomSort($("#source").val().split(",")).join(","));
 });

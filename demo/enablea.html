@@ -24,6 +24,7 @@
 <script src="http://wq.360buyimg.com/js/ho2/ho2.js"></script>
 <script src="http://wq.360buyimg.com/js/ho2/dev/enablea.js"></script>
 <script type="text/javascript">
+require("enablea");
 $("#prevent").tap(function(){
     $(this).remove();
     document.body.addEventListener("touchend",function(e){e.preventDefault();});
