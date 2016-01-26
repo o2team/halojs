@@ -28,9 +28,11 @@ KEY: <input type="text" value="test" id="k" /><br /><br />
 require("request");
 $("#all").click(function(){
 	console.log($.request());
+    alert(JSON.stringify($.request()));
 });
 $("#v").click(function(){
 	console.log($.request($("#k").val()));
+    alert($.request($("#k").val()));
 });
 
 </script>
