@@ -53,16 +53,16 @@
 );</textarea>
 <a href="javascript:;" id="update" class="btn">运行</a>
 
-<script type="text/javascript" src="http://wq.360buyimg.com/js/ho2/zepto.js"></script>
-<script src="http://wq.360buyimg.com/js/ho2/dev/uncmd.js?v1212"></script>
-<script src="http://wq.360buyimg.com/js/ho2/dev/cookie.js"></script>
-<script src="http://wq.360buyimg.com/js/ho2/dev/request.js"></script>
+<script type="text/javascript" src="//wq.360buyimg.com/js/ho2/zepto.js"></script>
+<script src="//wq.360buyimg.com/js/ho2/dev/uncmd.js?v1212"></script>
+<script src="//wq.360buyimg.com/js/ho2/dev/cookie.js"></script>
+<script src="//wq.360buyimg.com/js/ho2/dev/request.js"></script>
 
-<script src="http://wq.360buyimg.com/js/ho2/dev/jsonp.js"></script>
-<script src="http://wq.360buyimg.com/js/ho2/bussiness/wqlogin.js"></script>
-<script src="http://wq.360buyimg.com/js/ho2/bussiness/g_tk.js"></script>
+<script src="//wq.360buyimg.com/js/ho2/dev/jsonp.js"></script>
+<script src="//wq.360buyimg.com/js/ho2/bussiness/wqlogin.js"></script>
+<script src="//wq.360buyimg.com/js/ho2/bussiness/g_tk.js"></script>
 
-<!--<script src="http://wq.360buyimg.com/js/ho2/bussiness/fetchCoupon.js?v=1212"></script>-->
+<!--<script src="//wq.360buyimg.com/js/ho2/bussiness/fetchCoupon.js?v=1212"></script>-->
 <script type="text/javascript">
 /*
     @ author leeenx
@@ -72,7 +72,7 @@
     @ 使用方法：
     $.fetchCoupon(
         {
-            url: "http://wq.jd.com/active/active_draw",  //可选项，表示更换接口的url地址
+            url: "//wq.jd.com/active/active_draw",  //可选项，表示更换接口的url地址
             data:
             {
                 activeid: "active_name",
@@ -115,7 +115,7 @@ define("fetchCoupon",function(require,exports,module){
             }
             if(typeof(level)=='undefined')delete data.level;//抽奖不需要level
             jsonp({
-                url: apiUrl?apiUrl:'http://wq.jd.com/active/active_draw',
+                url: apiUrl?apiUrl:'//wq.jd.com/active/active_draw',
                 data:data,
                 jsonp:"callback",
                 jsonpCallback:"ActiveLotteryCallBack",

@@ -17,9 +17,9 @@
 <body ontouchstart>
 <input type="button" value="打开京东APP" id="launchApp" />
 
-<script type="text/javascript" src="http://wq.360buyimg.com/js/ho2/zepto.js"></script>
-<script src="http://wq.360buyimg.com/js/ho2/ho2.js?v=2"></script>
-<script src="http://wq.360buyimg.com/js/ho2/dev/launchApp.js"></script>
+<script type="text/javascript" src="//wq.360buyimg.com/js/ho2/zepto.js"></script>
+<script src="//wq.360buyimg.com/js/ho2/ho2.js?v=2"></script>
+<script src="//wq.360buyimg.com/js/ho2/dev/launchApp.js"></script>
 <script type="text/javascript">
 require("launchApp");
 $("#launchApp").click(function(){
@@ -27,8 +27,8 @@ $("#launchApp").click(function(){
         {
             packageName: "com.jingdong.app.mall", //-- android对应的packagename
             scheme: "openApp.jdMobile://", //-- ios使用的scheme(其实android也会用这个)
-            downloadUrl:'http://h5.m.jd.com/active/download/download.html?channel=jd-shhd3',//通用下载地址，有时候有些下载需要做统计，会使用这个参数
-            downloadAndroid:'http://a.app.qq.com/o/simple.jsp?pkgname=com.jingdong.app.mall&g_f=991850',//安卓的下载地址
+            downloadUrl:'//h5.m.jd.com/active/download/download.html?channel=jd-shhd3',//通用下载地址，有时候有些下载需要做统计，会使用这个参数
+            downloadAndroid:'//a.app.qq.com/o/simple.jsp?pkgname=com.jingdong.app.mall&g_f=991850',//安卓的下载地址
             downloadIOS:'https://itunes.apple.com/cn/app/id414245413'//ios的app_store地址
         }
     );
